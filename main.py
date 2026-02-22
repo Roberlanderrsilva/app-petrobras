@@ -9,7 +9,8 @@ st.write("---")
 
 # --- BANCO DE DADOS: BLOCO 01 (50 QUESTÕES) ---
 if 'questoes_db' not in st.session_state:
-    db_original = [            # --- MATÉRIA 03: PROCESSOS DE REFINO E PETROQUÍMICA ---
+    db_original = [     
+        # --- MATÉRIA 03: PROCESSOS DE REFINO E PETROQUÍMICA ---
         {
             "enunciado": "O processo de Craqueamento Catalítico Fluido (FCC) é uma das unidades mais rentáveis de uma refinaria. Qual a principal transformação química que ocorre nesse processo e qual o seu objetivo comercial?",
             "opcoes": ["A) Unir moléculas leves para formar polímeros de alta densidade.", "B) Quebrar moléculas pesadas de hidrocarbonetos em frações mais leves e valiosas, como gasolina e GLP.", "C) Remover nitrogênio e enxofre através da reação com hidrogênio gasoso.", "D) Transformar óleo diesel em óleo lubrificante de alta viscosidade.", "E) Separar mecanicamente a água salgada do petróleo bruto."],
@@ -129,7 +130,7 @@ if 'questoes_db' not in st.session_state:
             "opcoes": ["A) Uma área onde o acesso é permitido apenas a diretores.", "B) Um local onde existe ou pode existir uma atmosfera explosiva devido à presença de gases, vapores ou poeiras inflamáveis.", "C) Uma zona de preservação ambiental com florestas nativas.", "D) Uma área de escritório com ar-condicionado.", "E) Um local onde não há nenhum risco elétrico."],
             "correta": "B) Um local onde existe ou pode existir uma atmosfera explosiva devido à presença de gases, vapores ou poeiras inflamáveis.",
             "explicacao": "Áreas classificadas exigem equipamentos elétricos especiais (Ex) para evitar centelhas que causem explosão."
-        }
+        },
             
         # --- MATÉRIA 02: SEGURANÇA INDUSTRIAL E NORMAS REGULAMENTADORAS (NRs) ---
         {
