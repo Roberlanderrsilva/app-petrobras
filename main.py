@@ -1,54 +1,76 @@
 import streamlit as st
 
-st.set_page_config(page_title="Mentor Petrobras", layout="centered")
+st.set_page_config(page_title="Simulado Petrobras - Cesgranrio", layout="centered")
+
+# Estilo para botões grandes e limpos
+st.markdown("""
+    <style>
+    div.stButton > button:first-child { width: 100%; height: 3em; font-size: 18px; }
+    </style>
+    """, unsafe_allow_html=True)
 
 st.title("⚓ Mentor Petrobras")
-st.subheader("Simulado Inteligente")
+st.write("---")
 
-# Banco de Dados de Perguntas (Podemos poner miles aquí)
+# Banco de Dados padrão Cesgranrio (ABCDE)
 questoes = [
     {
-        "pergunta": "De acordo com a NR-10, qual o foco principal?",
-        "opcoes": ["Estética", "Segurança e Saúde", "Economia", "Iluminação"],
-        "correta": "Segurança e Saúde"
+        "enunciado": "Em uma instalação industrial, a norma que estabelece os requisitos e condições mínimas objetivando a implementação de medidas de controle e sistemas preventivos, de forma a garantir a segurança e a saúde dos trabalhadores que, direta ou indiretamente, interajam em instalações elétricas e serviços com eletricidade é a:",
+        "opcoes": [
+            "A) NR-10",
+            "B) NR-12",
+            "C) NR-13",
+            "D) NR-33",
+            "E) NR-35"
+        ],
+        "correta": "A) NR-10",
+        "explicacao": "A NR-10 é a norma específica para segurança em instalações e serviços em eletricidade."
     },
     {
-        "pergunta": "Qual equipamento é usado para elevar a pressão de um fluido líquido?",
-        "opcoes": ["Compressor", "Válvula", "Bomba Centrifuga", "Permutador"],
-        "correta": "Bomba Centrifuga"
-    },
-    {
-        "pergunta": "Na estabilidade de navios (Lastro), o que é o Metacentro?",
-        "opcoes": ["O fundo do navio", "Um ponto de referência para estabilidade", "O peso da carga", "A âncora"],
-        "correta": "Um ponto de referência para estabilidade"
+        "enunciado": "No que se refere ao transporte de fluidos, o equipamento dinâmico que tem por finalidade transformar energia mecânica em energia de pressão, cedendo esta última ao fluido líquido, é denominado:",
+        "opcoes": [
+            "A) Compressor alternativo",
+            "B) Compressor centrífugo",
+            "C) Bomba centrífuga",
+            "D) Ejetor",
+            "E) Turbina a vapor"
+        ],
+        "correta": "C) Bomba centrífuga",
+        "explicacao": "Bombas são para líquidos; compressores são para gases e vapores."
     }
 ]
 
-# Sistema de navegação simples usando o índice da pergunta
+# Inicialização do estado
 if 'indice' not in st.session_state:
     st.session_state.indice = 0
+    st.session_state.mostrar_explica = False
 
 q = questoes[st.session_state.indice]
 
-st.write(f"### Questão {st.session_state.indice + 1}")
-st.write(f"**{q['pergunta']}**")
+# Layout da Questão
+st.subheader(f"Questão {st.session_state.indice + 1}")
+st.info(q["enunciado"])
 
-resposta = st.radio("Escolha a opção:", q['opcoes'], key=f"q_{st.session_state.indice}")
+resposta = st.radio("Escolha a alternativa correta:", q['opcoes'], key=f"rad_{st.session_state.indice}")
 
-if st.button("Confirmar Resposta"):
-    if resposta == q['correta']:
-        st.success("✅ Correto!")
-    else:
-        st.error(f"❌ Errado! A resposta era: {q['correta']}")
+col1, col2 = st.columns(2)
 
-# Botão para ir para a próxima
-if st.button("Próxima Questão ➡️"):
-    if st.session_state.indice < len(questoes) - 1:
-        st.session_state.indice += 1
-        st.rerun()
-    else:
-        st.write("🎉 Você terminou o simulado de teste!")
-        if st.button("Recomeçar"):
-            st.session_state.indice = 0
+with col1:
+    if st.button("Confirmar"):
+        if resposta == q['correta']:
+            st.success("✅ CORRETO!")
+        else:
+            st.error(f"❌ INCORRETO!")
+        st.session_state.mostrar_explica = True
+
+with col2:
+    if st.button("Próxima ➡️"):
+        if st.session_state.indice < len(questoes) - 1:
+            st.session_state.indice += 1
+            st.session_state.mostrar_explica = False
             st.rerun()
-            
+        else:
+            st.warning("Fim do simulado de teste!")
+
+if st.session_state.mostrar_explica:
+    st.help(f"**Explicação:** {q['explicacao']}")
