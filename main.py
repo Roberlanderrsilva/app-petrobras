@@ -1,17 +1,19 @@
 import streamlit as st
 
-st.set_page_config(page_title="Simulado Petrobras - Cesgranrio", layout="centered")
+st.set_page_config(page_title="Mentor Petrobras", layout="centered")
 
-# Estilo para botões grandes
-st.markdown("""
-    <style>
-    div.stButton > button:first-child { width: 100%; height: 3em; font-size: 18px; }
-    </style>
-    """, unsafe_allow_html=True)
+# --- CABEÇALHO VISUAL ---
+# Aqui você pode colocar o link de uma imagem da internet ou do seu GitHub
+st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Petrobras_logo.svg/1200px-Petrobras_logo.svg.png", width=150)
 
 st.title("⚓ Mentor Petrobras")
-st.subheader("Simulado: Operador de Produção")
+st.markdown("""
+    <h3 style='color: #008542;'>Simulado Especialista: Operador de Produção</h3>
+    <p><i>Prepare-se com foco na banca Cesgranrio</i></p>
+    """, unsafe_allow_html=True)
+
 st.write("---")
+
 
 # BANCO DE DADOS ATUALIZADO (10 QUESTÕES)
 questoes = [
