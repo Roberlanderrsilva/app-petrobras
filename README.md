@@ -1,3 +1,7 @@
+<p align="right">
+  <img src="marca_registrada.png" width="50">
+</p>
+
 # 📝 Petrobras Aprova: Plataforma de Simulados para Operador de Produção
 
 <p align="center">
@@ -27,3 +31,4 @@ Desenvolvido para futuros **Operadores de Produção**, este Web App permite que
 
 ---
 **Desenvolvido por RRSilva** *Seu esforço, sua vaga. O melhor simulador para o Operador do futuro!* 🇧🇷💧
+st.sidebar.image("marca_registrada.png", width=100)
