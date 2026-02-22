@@ -3,7 +3,6 @@ import streamlit as st
 st.set_page_config(page_title="Mentor Petrobras", layout="centered")
 
 # --- CABEÇALHO VISUAL ---
-# Aqui você pode colocar o link de uma imagem da internet ou do seu GitHub
 st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Petrobras_logo.svg/1200px-Petrobras_logo.svg.png", width=150)
 
 st.title("⚓ Mentor Petrobras")
@@ -14,13 +13,12 @@ st.markdown("""
 
 st.write("---")
 
-
-# BANCO DE DADOS ATUALIZADO (10 QUESTÕES)
+# BANCO DE DADOS (10 QUESTÕES)
 questoes = [
     {
         "enunciado": "Em uma unidade de processamento de petróleo, as bombas centrífugas são amplamente utilizadas. Para evitar o fenômeno da cavitação em uma bomba centrífuga, o operador deve garantir que:",
         "opcoes": ["A) O NPSH disponível seja menor que o NPSH requerido", "B) O NPSH disponível seja maior que o NPSH requerido", "C) A temperatura do fluido seja aumentada drasticamente", "D) A pressão na sucção seja reduzida ao mínimo", "E) A válvula de descarga esteja totalmente fechada"],
-        "correta": "B) O NPSH disponível seja maior que o NPSH requerido",
+        "correta": "B) O NPSH disponível seja mayor que o NPSH requerido",
         "explicacao": "Cavitação ocorre quando a pressão do líquido cai abaixo da pressão de vapor. Manter o NPSH disponível maior que o requerido evita a formação de bolhas de vapor."
     },
     {
@@ -95,11 +93,13 @@ if st.button("Confirmar Resposta"):
     if resposta == q['correta']:
         st.success("✅ CORRETO!")
     else:
-        st.error(f"❌ INCORRETO!")
+        st.error(f"❌ INCORRETO! A resposta certa era: {q['correta']}")
     st.session_state.mostrar_explica = True
 
+# --- ALTERAÇÃO AQUI: Mudamos st.help por st.markdown ---
 if st.session_state.mostrar_explica:
-    st.help(f"**Explicação:** {q['explicacao']}")
+    st.markdown(f"**Explicação:** {q['explicacao']}")
+    
     if st.button("Próxima Questão ➡️"):
         if st.session_state.indice < len(questoes) - 1:
             st.session_state.indice += 1
@@ -112,3 +112,4 @@ if st.session_state.mostrar_explica:
                 st.session_state.indice = 0
                 st.session_state.mostrar_explica = False
                 st.rerun()
+                
