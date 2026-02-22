@@ -10,57 +10,131 @@ st.write("---")
 # --- BANCO DE DADOS: BLOCO 01 (50 QUESTÕES) ---
 if 'questoes_db' not in st.session_state:
     db_original = [
-        {"enunciado": "Para evitar a cavitação em bombas centrífugas, o operador deve garantir que:", "opcoes": ["A) NPSH disponível < NPSH requerido", "B) NPSH disponível > NPSH requerido", "C) Pressão de sucção seja zero", "D) Fluido esteja fervendo", "E) Válvula de sucção fechada"], "correta": "B) NPSH disponível > NPSH requerido", "explicacao": "O NPSH disponível deve ser sempre maior que o requerido para evitar vaporização do fluido."},
-        {"enunciado": "Qual norma regulamentadora trata de Segurança em Instalações e Serviços em Eletricidade?", "opcoes": ["A) NR-10", "B) NR-12", "C) NR-13", "D) NR-20", "E) NR-35"], "correta": "A) NR-10", "explicacao": "A NR-10 é a norma técnica para riscos elétricos."},
-        {"enunciado": "O equipamento que realiza a troca térmica entre dois fluidos sem contato direto é:", "opcoes": ["A) Torre de resfriamento", "B) Vaso de pressão", "C) Permutador de calor", "D) Caldeira", "E) Forno"], "correta": "C) Permutador de calor", "explicacao": "Permutadores transferem calor através de paredes metálicas (tubos)."},
-        {"enunciado": "A principal função de um 'Demister' (Eliminador de Névoa) é:", "opcoes": ["A) Aquecer o gás", "B) Remover gotículas de líquido do fluxo de gás", "C) Filtrar areia", "D) Medir a pressão", "E) Condensar o vapor"], "correta": "B) Remover gotículas de líquido do fluxo de gás", "explicacao": "O demister retém o líquido arrastado pelo gás por impacto em uma malha."},
-        {"enunciado": "Sobre o GLP (Gás Liquefeito de Petróleo), é correto afirmar que:", "opcoes": ["A) É mais leve que o ar", "B) É composto principalmente por metano", "C) É mais pesado que o ar e tende a se acumular em locais baixos", "D) Não é inflamável", "E) Não possui odor natural ou artificial"], "correta": "C) É mais pesado que o ar e tende a se acumular em locais baixos", "explicacao": "O GLP é mais denso que o ar, o que exige ventilação ao nível do solo."},
-        {"enunciado": "O instrumento utilizado para medir a vazão baseado na diferença de pressão em um estreitamento é:", "opcoes": ["A) Termopar", "B) Placa de orifício", "C) Manômetro de Bourdon", "D) Rotâmetro", "E) Radar"], "correta": "B) Placa de orifício", "explicacao": "A placa de orifício gera um diferencial de pressão proporcional à vazão."},
-        {"enunciado": "A válvula que permite o fluxo em apenas um sentido é a:", "opcoes": ["A) Globo", "B) Gaveta", "C) Retenção", "D) Borboleta", "E) Esfera"], "correta": "C) Retenção", "explicacao": "Válvulas de retenção impedem o retorno do fluido."},
-        {"enunciado": "Qual o principal risco do H2S (Gás Sulfídrico)?", "opcoes": ["A) Apenas inflamabilidade", "B) Toxicidade aguda e corrosividade", "C) É um gás inerte", "D) Causa apenas tontura leve", "E) É benéfico à saúde"], "correta": "B) Toxicidade aguda e corrosividade", "explicacao": "O H2S é extremamente tóxico e 'mata' o olfato em altas concentrações."},
-        {"enunciado": "Em segurança do trabalho, a sigla EPC significa:", "opcoes": ["A) Equipamento de Proteção Individual", "B) Equipamento de Proteção Coletiva", "C) Exame de Pressão Clínica", "D) Empresa de Petróleo e Combustível", "E) Elemento de Proteção de Carga"], "correta": "B) Equipamento de Proteção Coletiva", "explicacao": "EPCs protegem todos no ambiente, como corrimãos e exaustores."},
-        {"enunciado": "O ponto de fulgor é a temperatura mínima na qual um combustível:", "opcoes": ["A) Queima continuamente", "B) Libera vapores que formam mistura inflamável momentânea", "C) Entra em ignição espontânea", "D) Se torna sólido", "E) Evapora totalmente"], "correta": "B) Libera vapores que formam mistura inflamável momentânea", "explicacao": "No ponto de fulgor, há um 'flash' momentâneo."},
-        {"enunciado": "Na NR-13, a sigla PMTA significa:", "opcoes": ["A) Pressão Média de Trabalho Autorizada", "B) Pressão Máxima de Trabalho Admissível", "C) Potência Máxima", "D) Ponto de Manutenção", "E) Pressão Mínima"], "correta": "B) Pressão Máxima de Trabalho Admissível", "explicacao": "A PMTA é o limite de pressão de segurança para vasos e caldeiras."},
-        {"enunciado": "O equipamento que remove calor usando ar ambiente é o:", "opcoes": ["A) Refervedor", "B) Permutador casco e tubos", "C) Air Cooler", "D) Caldeira", "E) Forno"], "correta": "C) Air Cooler", "explicacao": "Air coolers usam ventiladores para trocar calor com a atmosfera."},
-        {"enunciado": "A cor de identificação de tubulações de incêndio (NR-26) é:", "opcoes": ["A) Amarelo", "B) Verde", "C) Azul", "D) Vermelho", "E) Branco"], "correta": "D) Vermelho", "explicacao": "Vermelho é usado para equipamentos de proteção e combate a incêndio."},
-        {"enunciado": "Qual o objetivo do sistema de 'Flare' (Tocha)?", "opcoes": ["A) Iluminação", "B) Queimar gases residuais com segurança", "C) Gerar vapor", "D) Aquecer óleo", "E) Filtrar o ar"], "correta": "B) Queimar gases residuais com segurança", "explicacao": "O flare alivia pressão queimando gases que não podem ser liberados puro."},
-        {"enunciado": "Segundo a NR-35, trabalho em altura é acima de:", "opcoes": ["A) 1,00 m", "B) 1,50 m", "C) 2,00 m", "D) 3,00 m", "E) 5,00 m"], "correta": "C) 2,00 m", "explicacao": "A norma define trabalho em altura a partir de 2 metros de queda livre."},
-        {"enunciado": "O 'Golpe de Aríete' é causado por:", "opcoes": ["A) Baixa temperatura", "B) Fechamento brusco de válvulas", "C) Excesso de gás", "D) Falta de óleo", "E) Corrosão"], "correta": "B) Fechamento brusco de válvulas", "explicacao": "A interrupção súbita do fluxo cria uma onda de choque na tubulação."},
-        {"enunciado": "A Árvore de Natal Molhada (ANM) serve para:", "opcoes": ["A) Gerar energia", "B) Controle do fluxo do poço submarino", "C) Bombear lama", "D) Separar gás", "E) Armazenar diesel"], "correta": "B) Controle do fluxo do poço submarino", "explicacao": "A ANM controla a produção e segurança no fundo do mar."},
-        {"enunciado": "O 'Quebra-jato' em um vaso serve para:", "opcoes": ["A) Filtrar o óleo", "B) Reduzir turbulência na entrada", "C) Aquecer a água", "D) Medir nível", "E) Coletar amostras"], "correta": "B) Reduzir turbulência na entrada", "explicacao": "Dissipa a energia do fluido para facilitar a separação das fases."},
-        {"enunciado": "Classe de incêndio que envolve metais combustíveis (ex: sódio):", "opcoes": ["A) Classe A", "B) Classe B", "C) Classe C", "D) Classe D", "E) Classe K"], "correta": "D) Classe D", "explicacao": "Metais pirofóricos exigem agentes extintores especiais de pó classe D."},
-        {"enunciado": "O 'Rotâmetro' mede qual grandeza?", "opcoes": ["A) Pressão", "B) Temperatura", "C) Vazão instantânea", "D) Nível", "E) Densidade"], "correta": "C) Vazão instantânea", "explicacao": "É um medidor de área variável que indica o fluxo visualmente."},
-        {"enunciado": "Função do 'Refervedor' (Reboiler) na torre:", "opcoes": ["A) Resfriar topo", "B) Vaporizar o fundo da torre", "C) Limpar diesel", "D) Bombear óleo", "E) Filtrar gás"], "correta": "B) Vaporizar o fundo da torre", "explicacao": "Fornece o calor necessário para manter a destilação."},
-        {"enunciado": "Válvula com menor perda de carga quando aberta:", "opcoes": ["A) Globo", "B) Agulha", "C) Esfera ou Gaveta", "D) Borboleta", "E) Diafragma"], "correta": "C) Esfera ou Gaveta", "explicacao": "Oferecem passagem plena ao fluido, minimizando resistência."},
-        {"enunciado": "O que é 'NPSH Requerido'?", "opcoes": ["A) Pressão da instalação", "B) Pressão mínima exigida pela bomba", "C) Nível do tanque", "D) Velocidade", "E) Temperatura"], "correta": "B) Pressão mínima exigida pela bomba", "explicacao": "É a pressão que a bomba precisa na sucção para não cavitar."},
-        {"enunciado": "Bomba de deslocamento positivo (ex: pistão) caracteriza-se por:", "opcoes": ["A) Não gerar pressão", "B) Vazão constante independente da pressão", "C) Só para água", "D) Igual a centrífuga", "E) Sem válvulas"], "correta": "B) Vazão constante independente da pressão", "explicacao": "Elas deslocam um volume fixo a cada ciclo de movimento."},
-        {"enunciado": "A sigla FISPQ (FDS) refere-se a:", "opcoes": ["A) Inspeção de prédios", "B) Segurança de Produtos Químicos", "C) Salários", "D) Solda", "E) Saúde"], "correta": "B) Segurança de Produtos Químicos", "explicacao": "Documento com riscos, manuseio e primeiros socorros químicos."},
-        {"enunciado": "O compressor 'Alternativo' assemelha-se a:", "opcoes": ["A) Ventilador", "B) Motor de pistão", "C) Turbina", "D) Moinho", "E) Mangueira"], "correta": "B) Motor de pistão", "explicacao": "Usa o movimento de vai-e-vem do pistão para comprimir o gás."},
-        {"enunciado": "Componente que protege contra sólidos na linha:", "opcoes": ["A) Vaso", "B) Filtro ou Strainer", "C) Permutador", "D) PSV", "E) Tanque"], "correta": "B) Filtro ou Strainer", "explicacao": "Retém detritos para proteger bombas e válvulas a jusante."},
-        {"enunciado": "NR-33 exige monitorar a atmosfera com:", "opcoes": ["A) Termômetro", "B) Detector de gases multigas", "C) Lanterna", "D) Rádio", "E) Anemômetro"], "correta": "B) Detector de gases multigas", "explicacao": "Obrigatório medir O2, inflamáveis e gases tóxicos antes de entrar."},
-        {"enunciado": "A 'Bacia de Contenção' serve para:", "opcoes": ["A) Beber água", "B) Conter vazamentos e evitar poluição", "C) Fundação", "D) Resfriar", "E) Guardar ferramentas"], "correta": "B) Conter vazamentos e evitar poluição", "explicacao": "Retém o volume do tanque em caso de vazamento."},
-        {"enunciado": "Separação por solubilidade em solvente é:", "opcoes": ["A) Destilação", "B) Absorção ou Extração", "C) Filtração", "D) Decantação", "E) Centrifugação"], "correta": "B) Absorção ou Extração", "explicacao": "O solvente captura seletivamente um componente da mistura."},
-        {"enunciado": "EPI para proteção auditiva:", "opcoes": ["A) Capacete", "B) Protetor auricular", "C) Óculos", "D) Luva", "E) Máscara"], "correta": "B) Protetor auricular", "explicacao": "Essencial em ambientes com ruído acima do limite."},
-        {"enunciado": "Função do selo mecânico em bombas:", "opcoes": ["A) Lubrificar", "B) Vedação do fluido para o ambiente", "C) Resfriar", "D) Aumentar vazão", "E) Filtrar"], "correta": "B) Vedação do fluido para o ambiente", "explicacao": "Impede que o fluido escape pelo eixo da bomba."},
-        {"enunciado": "Fração retirada na base da torre de destilação:", "opcoes": ["A) Nafta", "B) Querosene", "C) Resíduo atmosférico", "D) GLP", "E) Diesel"], "correta": "C) Resíduo atmosférico", "explicacao": "Os componentes mais pesados ficam no fundo da torre."},
-        {"enunciado": "Termopar mede temperatura através de:", "opcoes": ["A) Mercúrio", "B) Diferença de potencial elétrico", "C) Laser", "D) Pressão", "E) Som"], "correta": "B) Diferença de potencial elétrico", "explicacao": "Usa a junta de dois metais (efeito Seebeck)."},
-        {"enunciado": "Acumulador hidráulico serve para:", "opcoes": ["A) Resfriar", "B) Armazenar energia (fluido pressurizado)", "C) Filtrar ar", "D) Medir", "E) Aquecer"], "correta": "B) Armazenar energia (fluido pressurizado)", "explicacao": "Garante pressão em caso de falha da bomba principal."},
-        {"enunciado": "Quem emite PT para trabalho em altura?", "opcoes": ["A) Trabalhador", "B) Porteiro", "C) Supervisor autorizado", "D) Médico", "E) Sindicato"], "correta": "C) Supervisor autorizado", "explicacao": "Documento assinado por quem avaliou os riscos do local."},
-        {"enunciado": "Bomba centrífuga com sucção fechada gera:", "opcoes": ["A) Rendimento", "B) Superaquecimento e danos", "C) Pressão infinita", "D) Economia", "E) Vácuo puro"], "correta": "B) Superaquecimento e danos", "explicacao": "Sem fluxo para resfriar, a bomba pode travar."},
-        {"enunciado": "Chicanas (Baffles) no trocador servem para:", "opcoes": ["A) Vedar", "B) Direcionar fluxo e suporte mecânico", "C) Bombear", "D) Filtrar", "E) Aquecer"], "correta": "B) Direcionar fluxo e suporte mecânico", "explicacao": "Melhoram a troca térmica e evitam vibração dos tubos."},
-        {"enunciado": "Agente proibido para fogo elétrico energizado:", "opcoes": ["A) CO2", "B) Pó Químico", "C) Água", "D) Halon", "E) Pó ABC"], "correta": "C) Água", "explicacao": "Água conduz eletricidade e causa choque fatal."},
-        {"enunciado": "Máquina que aumenta pressão reduzindo volume do gás:", "opcoes": ["A) Soprador", "B) Compressor", "C) Exaustor", "D) Condensador", "E) Válvula"], "correta": "B) Compressor", "explicacao": "Fundamental para movimentar gases em alta pressão."},
-        {"enunciado": "Válvula de esfera é do tipo:", "opcoes": ["A) Gaveta", "B) Globo", "C) Quarto de volta", "D) Agulha", "E) Diafragma"], "correta": "C) Quarto de volta", "explicacao": "Gira 90 graus para abrir ou fechar totalmente."},
-        {"enunciado": "Função da PSV em vasos de pressão:", "opcoes": ["A) Controle", "B) Proteção contra sobrepressão", "C) Nível", "D) Drenagem", "E) Limpeza"], "correta": "B) Proteção contra sobrepressão", "explicacao": "Abre automaticamente para evitar a explosão do vaso."},
-        {"enunciado": "Objetivo da Permissão de Trabalho (PT):", "opcoes": ["A) Férias", "B) Garantia de análise de riscos e segurança", "C) Ponto", "D) Salário", "E) Materiais"], "correta": "B) Garantia de análise de riscos e segurança", "explicacao": "Documento vital para qualquer serviço de risco na área."},
-        {"enunciado": "Manômetro no verde indica:", "opcoes": ["A) Vazio", "B) Pressurizado e pronto para uso", "C) Descarte", "D) Tóxico", "E) Água"], "correta": "B) Pressurizado e pronto para uso", "explicacao": "Indica que a pressão interna do extintor está correta."},
-        {"enunciado": "Torre de resfriamento esfria a água por:", "opcoes": ["A) Gelo", "B) Evaporação parcial", "C) Nitrogênio", "D) Sombras", "E) Vácuo"], "correta": "B) Evaporação parcial", "explicacao": "A troca térmica ocorre com o ar ambiente através da evaporação."},
-        {"enunciado": "Norma para Máquinas e Equipamentos:", "opcoes": ["A) NR-10", "B) NR-12", "C) NR-13", "D) NR-20", "E) NR-35"], "correta": "B) NR-12", "explicacao": "Regula proteções físicas e operação segura de máquinas."},
-        {"enunciado": "Manômetro local serve para:", "opcoes": ["A) Mandar sinal", "B) Leitura visual no campo", "C) Ligar alarmes", "D) Filtrar óleo", "E) Esfriar linha"], "correta": "B) Leitura visual no campo", "explicacao": "Indica a pressão apenas para quem está perto do equipamento."},
-        {"enunciado": "Craqueamento Catalítico (FCC) serve para:", "opcoes": ["A) Limpar areia", "B) Quebrar moléculas pesadas em leves (Gasolina/GLP)", "C) Congelar diesel", "D) Adicionar água", "E) Pintar tanques"], "correta": "B) Quebrar moléculas pesadas em leves (Gasolina/GLP)", "explicacao": "Transforma frações pesadas em produtos de alto valor comercial."},
-        {"enunciado": "O que caracteriza Espaço Confinado (NR-33)?", "opcoes": ["A) Sala ampla", "B) Local sem ventilação e sem ocupação contínua", "C) Pátio aberto", "D) Escritório", "E) Oficina"], "correta": "B) Local sem ventilação e sem ocupação contínua", "explicacao": "Locais com entrada/saída limitada e risco atmosférico."},
-        {"enunciado": "Barômetro mede:", "opcoes": ["A) Pressão interna", "B) Pressão atmosférica", "C) Temperatura", "D) Vazão", "E) Vácuo"], "correta": "B) Pressão atmosférica", "explicacao": "Mede a pressão do ar ambiente."}
-    ]
+                 # --- MATÉRIA 02: SEGURANÇA INDUSTRIAL E NORMAS REGULAMENTADORAS (NRs) ---
+        {
+            "enunciado": "A NR-13 estabelece que toda caldeira deve possuir um 'Prontuário' atualizado. Em caso de perda desse documento, qual deve ser a ação imediata do proprietário para conformidade legal?",
+            "opcoes": ["A) Operar a caldeira apenas em carga mínima.", "B) Reconstituir o prontuário através de inspeção técnica e recálculo da PMTA por profissional habilitado.", "C) Solicitar uma cópia simples ao fabricante via e-mail.", "D) Substituir a caldeira por uma nova imediatamente.", "E) Ignorar a ausência do documento desde que a válvula de segurança funcione."],
+            "correta": "B) Reconstituir o prontuário através de inspeção técnica e recálculo da PMTA por profissional habilitado.",
+            "explicacao": "A falta do prontuário é infração grave. A reconstituição técnica é obrigatória para garantir a integridade e segurança operacional."
+        },
+        {
+            "enunciado": "De acordo com a NR-33 (Espaços Confinados), o 'Vigia' possui funções específicas. Qual das alternativas abaixo descreve uma proibição para o Vigia durante a entrada dos trabalhadores?",
+            "opcoes": ["A) Manter contato contínuo com os trabalhadores autorizados.", "B) Operar os dispositivos de emergência e salvamento.", "C) Realizar outras tarefas que possam comprometer seu dever principal de monitoramento.", "D) Ordenar o abandono do espaço em caso de risco detectado.", "E) Acionar o plano de resgate quando necessário."],
+            "correta": "C) Realizar outras tarefas que possam comprometer seu dever principal de monitoramento.",
+            "explicacao": "O vigia deve ter foco exclusivo na segurança dos trabalhadores no interior do espaço, não podendo realizar tarefas paralelas."
+        },
+        
+        {
+            "enunciado": "A NR-20 classifica as instalações em Classes (I, II e III) de acordo com a atividade e a capacidade de armazenamento. Uma refinaria de petróleo, devido à complexidade e volume de inflamáveis, é tipicamente classificada como:",
+            "opcoes": ["A) Instalação de Classe I.", "B) Instalação de Classe II.", "C) Instalação de Classe III.", "D) Instalação de Risco Moderado.", "E) Área de Preservação Industrial."],
+            "correta": "C) Instalação de Classe III.",
+            "explicacao": "Refinarias e unidades de processamento de gás são instalações de Classe III por lidarem com grandes volumes de inflamáveis e processos complexos."
+        },
+        {
+            "enunciado": "No contexto da NR-10 (Segurança em Eletricidade), o estado de 'Desenergização' de um circuito só é reconhecido legalmente após o cumprimento de uma sequência de procedimentos. O primeiro passo dessa sequência é:",
+            "opcoes": ["A) Instalação de aterramento temporário.", "B) Seccionamento da fonte de energia.", "C) Proteção dos elementos energizados adjacentes.", "D) Impedimento de reenergização (travamento).", "E) Constatação da ausência de tensão."],
+            "correta": "B) Seccionamento da fonte de energia.",
+            "explicacao": "A desenergização começa obrigatoriamente pelo seccionamento físico do circuito, seguido pelo travamento e teste de ausência de tensão."
+        },
+        
+        {
+            "enunciado": "A NR-35 estabelece que o sistema de proteção contra quedas (SPQ) é obrigatório sempre que houver risco de queda. Qual o fator de queda ideal para minimizar o impacto no corpo do trabalhador em caso de retenção?",
+            "opcoes": ["A) Fator de queda igual a 2.", "B) Fator de queda maior que 2.", "C) Fator de queda menor que 1.", "D) Fator de queda infinito.", "E) O fator de queda não influencia a força de impacto."],
+            "correta": "C) Fator de queda menor que 1.",
+            "explicacao": "Quanto menor o fator de queda (distância da queda dividida pelo comprimento do talabarte), menor será a força de impacto transmitida ao trabalhador."
+        },
+        {
+            "enunciado": "Durante uma ronda, um operador detecta um incêndio em um transformador de óleo que ainda está conectado à rede elétrica. Qual o extintor de incêndio MAIS indicado para esta situação específica?",
+            "opcoes": ["A) Extintor de Água (H2O).", "B) Extintor de Espuma Mecânica.", "C) Extintor de Dióxido de Carbono (CO2) ou Pó Químico (PQS).", "D) Extintor de Água Pressurizada com aditivo.", "E) Abafamento com mantas de algodão."],
+            "correta": "C) Extintor de Dióxido de Carbono (CO2) ou Pó Químico (PQS).",
+            "explicacao": "Para equipamentos elétricos energizados (Classe C), devem-se usar agentes não condutores, como CO2 ou PQS."
+        },
+        {
+            "enunciado": "Em segurança química, o diamante de Hommel (NFPA 704) é utilizado para identificação rápida de riscos. O que representa a cor VERMELHA neste diagrama?",
+            "opcoes": ["A) Risco à Saúde.", "B) Reatividade Química.", "C) Inflamabilidade.", "D) Riscos Específicos (Oxidante, Radioativo).", "E) Nível de Corrosividade."],
+            "correta": "C) Inflamabilidade.",
+            "explicacao": "Vermelho indica o perigo de fogo; Azul (Saúde); Amarelo (Reatividade) e Branco (Riscos Específicos)."
+        },
+        [attachment_0](attachment)
+        {
+            "enunciado": "Segundo a NR-13, as válvulas de segurança de um vaso de pressão devem ser testadas periodicamente. O nome técnico da pressão na qual a válvula de segurança é ajustada para abrir é:",
+            "opcoes": ["A) Pressão de Teste Hidrostático.", "B) Pressão de Ajuste ou Set Point.", "C) Pressão de Ruptura do Casco.", "D) Pressão Atmosférica Local.", "E) Pressão Média de Operação."],
+            "correta": "B) Pressão de Ajuste ou Set Point.",
+            "explicacao": "O set point é a pressão exata calibrada para que a válvula abra e proteja o vaso contra sobrepressão."
+        },
+        {
+            "enunciado": "A Permissão de Trabalho (PT) é um documento essencial para atividades de risco. Qual a validade padrão de uma PT, conforme as boas práticas de gestão de segurança na indústria do petróleo?",
+            "opcoes": ["A) Válida por todo o ano civil.", "B) Válida apenas para a duração do turno de trabalho, podendo ser revalidada.", "C) Válida por tempo indeterminado até o fim da obra.", "D) Válida apenas para o horário comercial (08:00 às 17:00).", "E) Válida por uma semana, independente das condições do local."],
+            "correta": "B) Válida apenas para a duração do turno de trabalho, podendo ser revalidada.",
+            "explicacao": "A PT deve ser limitada ao turno para garantir que as condições de segurança sejam reavaliadas na troca de equipe."
+        },
+        {
+            "enunciado": "O conceito de 'Lote de Inflamáveis' na NR-20 é fundamental para o distanciamento de tanques. Para fins desta norma, o que define um líquido combustível?",
+            "opcoes": ["A) Qualquer líquido que tenha cheiro forte.", "B) Líquido com ponto de fulgor > 60 °C e <= 93 °C.", "C) Líquido que entra em ebulição a 100 °C.", "D) Líquido com ponto de fulgor abaixo de 0 °C.", "E) Somente derivados de petróleo bruto."],
+            "correta": "B) Líquido com ponto de fulgor > 60 °C e <= 93 °C.",
+            "explicacao": "A NR-20 separa inflamáveis (PF <= 60°C) de combustíveis (PF entre 60°C e 93°C)."
+        },
+        {
+            "enunciado": "Na análise de acidentes, a pirâmide de Bird sugere que para cada acidente grave, ocorrem centenas de 'quase-acidentes'. Qual a importância técnica de relatar um quase-acidente na refinaria?",
+            "opcoes": ["A) Gerar punições para a equipe envolvida.", "B) Prevenir a ocorrência de acidentes reais através da correção de desvios.", "C) Aumentar a burocracia do setor de RH.", "D) Cumprir apenas uma meta estética de segurança.", "E) Reduzir o salário dos supervisores."],
+            "correta": "B) Prevenir a ocorrência de acidentes reais através da correção de desvios.",
+            "explicacao": "O relato do 'quase-acidente' permite identificar falhas no sistema antes que alguém se machuque."
+        },
+        {
+            "enunciado": "O monitoramento de gases em espaços confinados deve ser contínuo. Se o alarme de oxigênio (O2) disparar indicando concentração abaixo de 19,5%, qual deve ser a ação imediata?",
+            "opcoes": ["A) Continuar o trabalho e aumentar a ventilação.", "B) Colocar uma máscara simples de poeira e prosseguir.", "C) Abandonar o local imediatamente, pois a atmosfera é considerada IPVS ou deficiente de O2.", "D) Ignorar o alarme, pois o corpo humano suporta até 15% de O2.", "E) Esperar o supervisor chegar para avaliar."],
+            "correta": "C) Abandonar o local imediatamente, pois a atmosfera é considerada IPVS ou deficiente de O2.",
+            "explicacao": "Abaixo de 19,5% de O2, o risco de asfixia é real e imediato. O abandono é obrigatório."
+        },
+        {
+            "enunciado": "A NR-12 trata da segurança em máquinas. O dispositivo que impede o funcionamento da máquina caso a proteção móvel seja aberta é chamado de:",
+            "opcoes": ["A) Botão de liga/desliga comum.", "B) Dispositivo de intertravamento (chave de segurança).", "C) Pedal de acionamento simples.", "D) Cabo de alimentação reforçado.", "E) Sensor de temperatura de carcaça."],
+            "correta": "B) Dispositivo de intertravamento (chave de segurança).",
+            "explicacao": "O intertravamento interrompe o comando de partida ou o movimento da máquina se a proteção for violada."
+        },
+        {
+            "enunciado": "O EPC (Equipamento de Proteção Coletiva) tem prioridade sobre o EPI (Equipamento de Proteção Individual) porque:",
+            "opcoes": ["A) O EPC é mais barato.", "B) O EPC elimina ou reduz o risco na fonte, protegendo todos os trabalhadores simultaneamente.", "C) O EPI é opcional na indústria do petróleo.", "D) O EPC não precisa de manutenção.", "E) O uso do EPI causa desconforto térmico."],
+            "correta": "B) O EPC elimina ou reduz o risco na fonte, protegendo todos os trabalhadores simultaneamente.",
+            "explicacao": "A hierarquia de controle de riscos sempre prioriza medidas coletivas antes das individuais."
+        },
+        {
+            "enunciado": "Qual o agente extintor recomendado para fogos em cozinhas industriais (Classe K), envolvendo óleos e gorduras vegetais/animais?",
+            "opcoes": ["A) Água pressurizada.", "B) Pó Químico Seco comum (BC).", "C) Solução de Acetato de Potássio (Agente Saponificante).", "D) Dióxido de Carbono (CO2).", "E) Extintor de espuma de alta expansão."],
+            "correta": "C) Solução de Acetato de Potássio (Agente Saponificante).",
+            "explicacao": "O agente classe K saponifica a gordura, criando uma camada que abafa o fogo e evita a reignição."
+        },
+        {
+            "enunciado": "Em trabalhos de soldagem em áreas classificadas, o teste de explosividade (LEL) deve indicar qual valor para que a Permissão de Trabalho de 'fogo' seja liberada?",
+            "opcoes": ["A) 50% do LEL.", "B) 20% do LEL.", "C) 0% de LEL (presença zero de gases inflamáveis).", "D) 100% de LEL.", "E) Qualquer valor abaixo do limite superior."],
+            "correta": "C) 0% de LEL (presença zero de gases inflamáveis).",
+            "explicacao": "Para trabalhos com chama aberta em áreas com risco de explosão, a atmosfera deve estar completamente livre de inflamáveis (0% LEL)."
+        },
+        {
+            "enunciado": "A NR-10 define 'Zona de Risco' como o entorno de parte condutora energizada, não segregada. O acesso a esta zona é restrito apenas a:",
+            "opcoes": ["A) Qualquer funcionário da limpeza.", "B) Trabalhadores autorizados e com treinamentos específicos.", "C) Visitantes acompanhados.", "D) Engenheiros civis sem treinamento elétrico.", "E) Operadores de produção sem curso de SEP."],
+            "correta": "B) Trabalhadores autorizados e com treinamentos específicos.",
+            "explicacao": "Apenas profissionais qualificados e autorizados podem intervir em zonas de risco elétrico."
+        },
+        {
+            "enunciado": "O que caracteriza uma atmosfera 'IPVS' (Imediatamente Perigosa à Vida ou à Saúde)?",
+            "opcoes": ["A) Uma atmosfera com cheiro de óleo diesel.", "B) Uma atmosfera que apresenta risco imediato de morte ou efeitos debilitantes graves à saúde.", "C) Um local com temperatura acima de 30°C.", "D) Uma sala com ruído acima de 80 dB.", "E) Qualquer ambiente externo com chuva."],
+            "correta": "B) Uma atmosfera que apresenta risco imediato de morte ou efeitos debilitantes graves à saúde.",
+            "explicacao": "IPVS exige medidas extremas de proteção, como o uso de ar mandado ou máscara autônoma."
+        },
+        {
+            "enunciado": "Sobre o uso de cinturão de segurança tipo paraquedista em trabalhos acima de 2 metros, o ponto de ancoragem deve suportar uma carga mínima determinada por norma ou cálculo. Este sistema visa evitar:",
+            "opcoes": ["A) O cansaço físico do trabalhador.", "B) O impacto contra o nível inferior e o efeito pêndulo.", "C) O uso de óculos de proteção.", "D) A necessidade de supervisão.", "E) A transpiração excessiva."],
+            "correta": "B) O impacto contra o nível inferior e o efeito pêndulo.",
+            "explicacao": "O sistema de retenção de queda deve ser planejado para parar o trabalhador antes que ele atinja o solo ou estruturas."
+        },
+        {
+            "enunciado": "A sigla CAT (Comunicação de Acidente de Trabalho) deve ser emitida pela empresa mesmo em casos de acidentes sem afastamento. Qual o prazo legal para emissão da CAT em caso de morte?",
+            "opcoes": ["A) Até o final do mês.", "B) Em até 24 horas.", "C) Imediatamente.", "D) Em até 7 dias úteis.", "E) Não é necessário emitir CAT em caso de morte."],
+            "correta": "C) Imediatamente.",
+            "explicacao": "Acidentes fatais exigem comunicação imediata às autoridades competentes."
+        }
+  ]
     random.shuffle(db_original) 
     st.session_state.questoes_db = db_original
 
