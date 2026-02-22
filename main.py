@@ -77,39 +77,40 @@ questoes = [
     }
 ]
 
-# LOGICA DO APP
-if 'indice' not in st.session_state:
-    st.session_state.indice = 0
-    st.session_state.mostrar_explica = False
+# --- LÓGICA DE NAVEGAÇÃO CORRIGIDA ---
+if st.session_state.indice < len(questoes):
+    q = questoes[st.session_state.indice]
+    st.subheader(f"Questão {st.session_state.indice + 1} de {len(questoes)}")
+    st.info(q["enunciado"])
 
-q = questoes[st.session_state.indice]
+    resposta = st.radio("Escolha a alternativa:", q['opcoes'], key=f"rad_{st.session_state.indice}")
 
-st.subheader(f"Questão {st.session_state.indice + 1} de {len(questoes)}")
-st.info(q["enunciado"])
-
-resposta = st.radio("Escolha a alternativa:", q['opcoes'], key=f"rad_{st.session_state.indice}")
-
-if st.button("Confirmar Resposta"):
-    if resposta == q['correta']:
-        st.success("✅ CORRETO!")
-    else:
-        st.error(f"❌ INCORRETO! A resposta certa era: {q['correta']}")
-    st.session_state.mostrar_explica = True
-
-# --- ALTERAÇÃO AQUI: Mudamos st.help por st.markdown ---
-if st.session_state.mostrar_explica:
-    st.markdown(f"**Explicação:** {q['explicacao']}")
-    
-    if st.button("Próxima Questão ➡️"):
-        if st.session_state.indice < len(questoes) - 1:
-            st.session_state.indice += 1
-            st.session_state.mostrar_explica = False
-            st.rerun()
+    if st.button("Confirmar Resposta"):
+        if resposta == q['correta']:
+            st.success("✅ CORRETO!")
         else:
-            st.balloons()
-            st.success("🎉 Parabéns! Você completou este bloco de questões.")
-            if st.button("Recomeçar Simulado"):
-                st.session_state.indice = 0
+            st.error(f"❌ INCORRETO! A resposta certa era: {q['correta']}")
+        st.session_state.mostrar_explica = True
+
+    if st.session_state.mostrar_explica:
+        st.markdown(f"**Explicação:** {q['explicacao']}")
+        
+        if st.button("Próxima Questão ➡️"):
+            if st.session_state.indice < len(questoes) - 1:
+                st.session_state.indice += 1
                 st.session_state.mostrar_explica = False
                 st.rerun()
-                
+            else:
+                # Se for a última, avançamos o índice para mostrar a tela final
+                st.session_state.indice += 1
+                st.rerun()
+
+else:
+    # --- TELA FINAL ---
+    st.balloons()
+    st.success("🎉 Parabéns! Você completou este bloco de questões.")
+    if st.button("Recomeçar Simulado"):
+        st.session_state.indice = 0
+        st.session_state.mostrar_explica = False
+        st.rerun()
+        
