@@ -1,17 +1,17 @@
 <p align="right">
-  <img src="marca_registrada.png" width="80" alt="Marca Mentor">
+  <img src="marca_registrada.png" width="80" alt="Marca Mentor Petrobrás">
 </p>
 
-# 📝 Mentor: Plataforma de Simulados para Operador da Petrobras
+# 📝 Mentor Petrobrás: Plataforma de Simulados para Operador da Petrobras
 
 <p align="center">
   <img src="banner_petrobras.png" alt="Mentor Banner" width="100%">
 </p>
 
 ## 🎯 Treine como se estivesse na Prova
-O **Mentor** é uma plataforma focada exclusivamente em **Simulados Estratégicos**. Sabemos que a teoria é importante, mas é o treino prático com questões técnicas que garante a vaga e a excelência operacional.
+O **Mentor Petrobrás** é uma plataforma focada exclusivamente em **Simulados Estratégicos**. Sabemos que a teoria é importante, mas é o treino prático com questões técnicas que garante a vaga e a excelência operacional.
 
-Desenvolvido para futuros **Operadores**, este Web App permite que você teste seus conhecimentos em tempo real, focando na agilidade e na precisão exigida pela Petrobras.
+Desenvolvido para futuros **Operadores**, este Web App permite que você teste seus conhecimentos em tempo real, focando na agilidade e na precisão exigida pela Petrobrás.
 
 ---
 
