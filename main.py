@@ -11,52 +11,46 @@ st.write("---")
 if 'questoes_db' not in st.session_state:
     db_original = [    
         # Bloco de questões para o Aplicativo "Mentor" - Petrobras (Operador)
-questoes_simulado = [
-        # ==============================================================================
-        # ==============================================================================
-# MATÉRIA: INSTRUMENTAÇÃO E CONTROLE DE PROCESSOS
-# PADRÃO: CESGRANRIO (REALISMO TOTAL PETROBRAS)
-# CONTEÚDO: MALHAS, SENSORES E VÁLVULAS
-# STATUS: 100% ATUALIZADO ✅
-# ==============================================================================
-
+# ==========================================
+# BLOCO DE TESTE: PADRÃO CESGRANRIO MASTER
+# ==========================================
         {
-            "enunciado": "Durante uma ronda operacional em uma unidade de destilação, o operador observa que uma válvula de controle de nível de um vaso separador está com 100% de abertura, mas o nível continua subindo acima do Set Point. Ao verificar o instrumento, nota-se que o sinal de saída do controlador (MV) é de 20 mA. Considerando que a válvula é do tipo 'Falha-Fechada' (Air-to-Open), qual a causa mais provável para o desvio?",
+            "enunciado": "Em uma unidade de destilação atmosférica, o operador nota que a temperatura no topo da torre está acima do valor de Set Point, comprometendo a especificação da Nafta. Para corrigir esse desvio e garantir o fracionamento adequado, a ação operacional imediata deve ser:",
             "opcoes": [
-                "A) O suprimento de ar de instrumentos da válvula foi interrompido.",
-                "B) O posicionador da válvula está operando em malha aberta.",
-                "C) Houve perda de sinal elétrico (0 mA) no transmissor de nível.",
-                "D) A válvula está travada mecanicamente na posição aberta ou há obstrução na linha.",
-                "E) O controlador foi colocado em modo manual por erro de lógica."
+                "A) Reduzir a carga de petróleo da unidade.",
+                "B) Aumentar a vazão de refluxo de topo da coluna.",
+                "C) Diminuir a pressão de vapor do refervedor.",
+                "D) Aumentar a temperatura de saída do forno.",
+                "E) Abrir totalmente a retirada de Diesel de fundo."
             ],
-            "correta": "D) A válvula está travada mecanicamente na posição aberta ou há obstrução na linha.",
-            "explicacao": "Se o sinal é 20mA (máximo) e a válvula é Air-to-Open, ela deveria estar totalmente aberta e dando vazão. Se o nível sobe mesmo com ela aberta, o problema é mecânico ou obstrução no fluxo."
+            "correta": "B) Aumentar a vazão de refluxo de topo da coluna.",
+            "explicacao": "O refluxo é a variável manipulada para controlar a temperatura de topo. Aumentando o refluxo, retira-se calor, baixando a temperatura e melhorando a qualidade da Nafta."
+        },
+        {
+            "enunciado": "A NR-13 estabelece requisitos mínimos para a gestão da integridade estrutural de caldeiras e vasos de pressão. De acordo com essa norma, um vaso de pressão que opera com fluido inflamável e volume superior a 1m³ deve obrigatoriamente possuir:",
+            "opcoes": [
+                "A) Pintura externa na cor vermelha de segurança.",
+                "B) Placa de identificação indelével e prontuário atualizado.",
+                "C) Sensor de temperatura digital em todos os drenos.",
+                "D) Sistema de resfriamento por nitrogênio líquido.",
+                "E) Operador dedicado 24h sem intervalos."
+            ],
+            "correta": "B) Placa de identificação indelével e prontuário atualizado.",
+            "explicacao": "A NR-13 exige que todo vaso de pressão tenha placa de identificação visível e documentação técnica (prontuário) disponível para fiscalização e segurança."
+        },
+        {
+            "enunciado": "Sensores de pressão do tipo 'Célula de Carga' ou 'Piezoelétricos' são comuns em processos industriais. No entanto, para indicação local de pressão em campo, sem necessidade de energia elétrica, o elemento sensor mecânico mais utilizado em manômetros na Petrobras é o:",
+            "opcoes": [
+                "A) Tubo de Venturi.",
+                "B) Tubo de Bourdon.",
+                "C) Sensor Capacitivo.",
+                "D) Termistor NTC.",
+                "E) Placa de Orifício."
+            ],
+            "correta": "B) Tubo de Bourdon.",
+            "explicacao": "O tubo de Bourdon converte a pressão interna em movimento mecânico do ponteiro, sendo o padrão para manômetros locais pela sua robustez e simplicidade."
         },
         
-        {
-            "enunciado": "Em sistemas de controle de processos químicos, a ação de controle Integral (I) é frequentemente utilizada em conjunto com a ação Proporcional (P). De acordo com a teoria de controle aplicada em refinarias, o principal objetivo técnico de inserir a ação Integral em uma malha de controle é:",
-            "opcoes": [
-                "A) Antecipar variações bruscas na variável de processo (PV).",
-                "B) Eliminar o erro de regime permanente (Offset) entre a PV e o Set Point.",
-                "C) Reduzir o tempo de resposta inicial da válvula de controle.",
-                "D) Estabilizar a malha em caso de ruídos de alta frequência no sensor.",
-                "E) Permitir que o controlador opere apenas com sinais pneumáticos."
-            ],
-            "correta": "B) Eliminar o erro de regime permanente (Offset) entre a PV e o Set Point.",
-            "explicacao": "A Cesgranrio cobra muito esse conceito: a ação Proporcional gera um erro residual (offset). Somente a ação Integral consegue zerar esse erro ao longo do tempo."
-        },
-        {
-            "enunciado": "Para a medição de temperatura em fornos de processo onde as temperaturas ultrapassam 1000°C, o sensor deve possuir alta robustez e ampla faixa de medição. Nestas condições, o instrumento mais adequado e comumente especificado nos projetos da Petrobras é o:",
-            "opcoes": [
-                "A) Termômetro bimetálico de haste rígida.",
-                "B) Sensor de resistência PT-100 (RTD).",
-                "C) Termopar tipo K (Cromel-Alumel).",
-                "D) Termômetro de enchimento de mercúrio.",
-                "E) Pressostato diferencial de temperatura."
-            ],
-            "correta": "C) Termopar tipo K (Cromel-Alumel).",
-            "explicacao": "Enquanto o PT-100 é mais preciso para temperaturas baixas e médias, os termopares (especialmente o tipo K) são os preferidos para altas temperaturas de fornos devido à sua durabilidade e faixa de medição."
-        },
 
     
         {
