@@ -177,7 +177,7 @@ if 'questoes_db' not in st.session_state:
             "correta": "C) Inflamabilidade.",
             "explicacao": "Vermelho indica o perigo de fogo; Azul (Saúde); Amarelo (Reatividade) e Branco (Riscos Específicos)."
         },
-        [attachment_0](attachment)
+    
         {
             "enunciado": "Segundo a NR-13, as válvulas de segurança de um vaso de pressão devem ser testadas periodicamente. O nome técnico da pressão na qual a válvula de segurança é ajustada para abrir é:",
             "opcoes": ["A) Pressão de Teste Hidrostático.", "B) Pressão de Ajuste ou Set Point.", "C) Pressão de Ruptura do Casco.", "D) Pressão Atmosférica Local.", "E) Pressão Média de Operação."],
@@ -242,20 +242,7 @@ if 'questoes_db' not in st.session_state:
             "enunciado": "O que caracteriza uma atmosfera 'IPVS' (Imediatamente Perigosa à Vida ou à Saúde)?",
             "opcoes": ["A) Uma atmosfera com cheiro de óleo diesel.", "B) Uma atmosfera que apresenta risco imediato de morte ou efeitos debilitantes graves à saúde.", "C) Um local com temperatura acima de 30°C.", "D) Uma sala com ruído acima de 80 dB.", "E) Qualquer ambiente externo com chuva."],
             "correta": "B) Uma atmosfera que apresenta risco imediato de morte ou efeitos debilitantes graves à saúde.",
-            "explicacao": "IPVS exige medidas extremas de proteção, como o uso de ar mandado ou máscara autônoma."
-        },
-        {
-            "enunciado": "Sobre o uso de cinturão de segurança tipo paraquedista em trabalhos acima de 2 metros, o ponto de ancoragem deve suportar uma carga mínima determinada por norma ou cálculo. Este sistema visa evitar:",
-            "opcoes": ["A) O cansaço físico do trabalhador.", "B) O impacto contra o nível inferior e o efeito pêndulo.", "C) O uso de óculos de proteção.", "D) A necessidade de supervisão.", "E) A transpiração excessiva."],
-            "correta": "B) O impacto contra o nível inferior e o efeito pêndulo.",
-            "explicacao": "O sistema de retenção de queda deve ser planejado para parar o trabalhador antes que ele atinja o solo ou estruturas."
-        },
-        {
-            "enunciado": "A sigla CAT (Comunicação de Acidente de Trabalho) deve ser emitida pela empresa mesmo em casos de acidentes sem afastamento. Qual o prazo legal para emissão da CAT em caso de morte?",
-            "opcoes": ["A) Até o final do mês.", "B) Em até 24 horas.", "C) Imediatamente.", "D) Em até 7 dias úteis.", "E) Não é necessário emitir CAT em caso de morte."],
-            "correta": "C) Imediatamente.",
-            "explicacao": "Acidentes fatais exigem comunicação imediata às autoridades competentes."
-        }
+
 
                  # --- MATÉRIA 02: SEGURANÇA INDUSTRIAL E NORMAS REGULAMENTADORAS (NRs) ---
         {
@@ -302,7 +289,7 @@ if 'questoes_db' not in st.session_state:
             "correta": "C) Inflamabilidade.",
             "explicacao": "Vermelho indica o perigo de fogo; Azul (Saúde); Amarelo (Reatividade) e Branco (Riscos Específicos)."
         },
-        [attachment_0](attachment)
+        
         {
             "enunciado": "Segundo a NR-13, as válvulas de segurança de um vaso de pressão devem ser testadas periodicamente. O nome técnico da pressão na qual a válvula de segurança é ajustada para abrir é:",
             "opcoes": ["A) Pressão de Teste Hidrostático.", "B) Pressão de Ajuste ou Set Point.", "C) Pressão de Ruptura do Casco.", "D) Pressão Atmosférica Local.", "E) Pressão Média de Operação."],
@@ -342,38 +329,7 @@ if 'questoes_db' not in st.session_state:
         {
             "enunciado": "O EPC (Equipamento de Proteção Coletiva) tem prioridade sobre o EPI (Equipamento de Proteção Individual) porque:",
             "opcoes": ["A) O EPC é mais barato.", "B) O EPC elimina ou reduz o risco na fonte, protegendo todos os trabalhadores simultaneamente.", "C) O EPI é opcional na indústria do petróleo.", "D) O EPC não precisa de manutenção.", "E) O uso do EPI causa desconforto térmico."],
-            "correta": "B) O EPC elimina ou reduz o risco na fonte, protegendo todos os trabalhadores simultaneamente.",
-            "explicacao": "A hierarquia de controle de riscos sempre prioriza medidas coletivas antes das individuais."
-        },
-        {
-            "enunciado": "Qual o agente extintor recomendado para fogos em cozinhas industriais (Classe K), envolvendo óleos e gorduras vegetais/animais?",
-            "opcoes": ["A) Água pressurizada.", "B) Pó Químico Seco comum (BC).", "C) Solução de Acetato de Potássio (Agente Saponificante).", "D) Dióxido de Carbono (CO2).", "E) Extintor de espuma de alta expansão."],
-            "correta": "C) Solução de Acetato de Potássio (Agente Saponificante).",
-            "explicacao": "O agente classe K saponifica a gordura, criando uma camada que abafa o fogo e evita a reignição."
-        },
-        {
-            "enunciado": "Em trabalhos de soldagem em áreas classificadas, o teste de explosividade (LEL) deve indicar qual valor para que a Permissão de Trabalho de 'fogo' seja liberada?",
-            "opcoes": ["A) 50% do LEL.", "B) 20% do LEL.", "C) 0% de LEL (presença zero de gases inflamáveis).", "D) 100% de LEL.", "E) Qualquer valor abaixo do limite superior."],
-            "correta": "C) 0% de LEL (presença zero de gases inflamáveis).",
-            "explicacao": "Para trabalhos com chama aberta em áreas com risco de explosão, a atmosfera deve estar completamente livre de inflamáveis (0% LEL)."
-        },
-        {
-            "enunciado": "A NR-10 define 'Zona de Risco' como o entorno de parte condutora energizada, não segregada. O acesso a esta zona é restrito apenas a:",
-            "opcoes": ["A) Qualquer funcionário da limpeza.", "B) Trabalhadores autorizados e com treinamentos específicos.", "C) Visitantes acompanhados.", "D) Engenheiros civis sem treinamento elétrico.", "E) Operadores de produção sem curso de SEP."],
-            "correta": "B) Trabalhadores autorizados e com treinamentos específicos.",
-            "explicacao": "Apenas profissionais qualificados e autorizados podem intervir em zonas de risco elétrico."
-        },
-        {
-            "enunciado": "O que caracteriza uma atmosfera 'IPVS' (Imediatamente Perigosa à Vida ou à Saúde)?",
-            "opcoes": ["A) Uma atmosfera com cheiro de óleo diesel.", "B) Uma atmosfera que apresenta risco imediato de morte ou efeitos debilitantes graves à saúde.", "C) Um local com temperatura acima de 30°C.", "D) Uma sala com ruído acima de 80 dB.", "E) Qualquer ambiente externo com chuva."],
-            "correta": "B) Uma atmosfera que apresenta risco imediato de morte ou efeitos debilitantes graves à saúde.",
-            "explicacao": "IPVS exige medidas extremas de proteção, como o uso de ar mandado ou máscara autônoma."
-        },
-        {
-            "enunciado": "Sobre o uso de cinturão de segurança tipo paraquedista em trabalhos acima de 2 metros, o ponto de ancoragem deve suportar uma carga mínima determinada por norma ou cálculo. Este sistema visa evitar:",
-            "opcoes": ["A) O cansaço físico do trabalhador.", "B) O impacto contra o nível inferior e o efeito pêndulo.", "C) O uso de óculos de proteção.", "D) A necessidade de supervisão.", "E) A transpiração excessiva."],
-            "correta": "B) O impacto contra o nível inferior e o efeito pêndulo."},
-            
+
         # --- MATÉRIA 01: OPERAÇÕES UNITÁRIAS (BOMBAS, TROCADORES, DESTILAÇÃO) ---
         {
             "enunciado": "Em uma unidade de hidrotratamento, uma bomba centrífuga de grande porte apresenta sinais de instabilidade, com flutuações na pressão de descarga e ruído característico de 'pinhão sendo triturado'. O operador suspeita de cavitação no primeiro estágio da bomba. Considerando a termodinâmica do processo, qual ação operacional imediata poderia mitigar a cavitação sem interromper o fluxo?",
