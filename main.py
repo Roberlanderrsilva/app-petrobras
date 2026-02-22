@@ -10,44 +10,55 @@ st.write("---")
 # --- BANCO DE DADOS: BLOCO 01 (50 QUESTÕES) ---
 if 'questoes_db' not in st.session_state:
     db_original = [    
-        # Bloco de 30 questões para o Aplicativo "Mentor" - Petrobras (Operador)
+        # Bloco de questões para o Aplicativo "Mentor" - Petrobras (Operador)
 questoes_simulado = [
-    {"id": 1, "materia": "Refino", "pergunta": "Qual a principal diferença entre a Destilação Atmosférica e a Destilação a Vácuo?", "opcoes": ["A temperatura de ebulição", "A pressão de operação", "O tipo de petróleo", "A cor do produto"], "resposta_correta": "A pressão de operação", "explicacao": "A destilação a vácuo opera em pressões reduzidas para evitar o craqueamento térmico de frações pesadas."},
-    {"id": 2, "materia": "Refino", "pergunta": "O que é o refluxo em uma torre de destilação?", "opcoes": ["Saída de gás", "Líquido que retorna à torre", "Entrada de carga", "Limpeza da torre"], "resposta_correta": "Líquido que retorna à torre", "explicacao": "O refluxo ajuda no controle da temperatura e melhora a separação dos componentes."},
-    {"id": 3, "materia": "Refino", "pergunta": "O craqueamento catalítico (FCC) utiliza qual agente para quebrar as moléculas?", "opcoes": ["Água", "Hidrogênio", "Catalisador sólido", "Vapor saturado"], "resposta_correta": "Catalisador sólido", "explicacao": "O catalisador promove a quebra das cadeias de hidrocarbonetos pesados em leves."},
-    {"id": 4, "materia": "Refino", "pergunta": "Qual o objetivo da Unidade de Coqueamento Retardado (UCR)?", "opcoes": ["Produzir apenas gás", "Transformar resíduo em coque e leves", "Lavar o petróleo", "Resfriar a carga"], "resposta_correta": "Transformar resíduo em coque e leves", "explicacao": "A UCR processa resíduos pesados da destilação a vácuo."},
-    {"id": 5, "materia": "Refino", "pergunta": "No HDT, o que significa a sigla S-10 no Diesel?", "opcoes": ["10% de óleo", "10 partes por milhão de enxofre", "10 litros de mistura", "10 graus de viscosidade"], "resposta_correta": "10 partes por milhão de enxofre", "explicacao": "Refere-se ao teor máximo de enxofre permitido."},
-    {"id": 6, "materia": "Refino", "pergunta": "Qual o principal componente do GLP?", "opcoes": ["Metano e Etano", "Propano e Butano", "Pentano e Hexano", "Octano"], "resposta_correta": "Propano e Butano", "explicacao": "O GLP é composto majoritariamente por propano e butano liquefeitos sob pressão."},
-    {"id": 7, "materia": "Refino", "pergunta": "A reforma catalítica visa principalmente aumentar o quê?", "opcoes": ["O volume de óleo", "A octanagem da gasolina", "A quantidade de asfalto", "O teor de enxofre"], "resposta_correta": "A octanagem da gasolina", "explicacao": "A reforma transforma hidrocarbonetos lineares em aromáticos e ramificados."},
-    {"id": 8, "materia": "Refino", "pergunta": "O que acontece na dessalgação do petróleo?", "opcoes": ["Adição de sal", "Remoção de sais e água", "Queima de gás", "Mistura com asfalto"], "resposta_correta": "Remoção de sais e água", "explicacao": "Evita corrosão e incrustação nos equipamentos da refinaria."},
-    {"id": 9, "materia": "Refino", "pergunta": "Qual fração é retirada no topo da torre de destilação atmosférica?", "opcoes": ["Resíduo", "Gás e Nafta", "Diesel", "Gasóleo"], "resposta_correta": "Gás e Nafta", "explicacao": "São as frações mais leves e voláteis."},
-    {"id": 10, "materia": "Refino", "pergunta": "A unidade de Alquilação produz qual componente?", "opcoes": ["Lubrificantes", "Isopentano e Iso-octano", "Querosene", "Coque"], "resposta_correta": "Isopentano e Iso-octano", "explicacao": "Produz alquilados de alta octanagem para gasolina premium."},
-    {"id": 11, "materia": "Refino", "pergunta": "O que é o 'ponto de fulgor' de um combustível?", "opcoes": ["Temperatura de congelamento", "Temperatura mínima para inflamar", "Pressão máxima de vapor", "Viscosidade ideal"], "resposta_correta": "Temperatura mínima para inflamar", "explicacao": "É a menor temperatura na qual o combustível libera vapores que se inflamam momentaneamente."},
-    {"id": 12, "materia": "Refino", "pergunta": "Qual a função dos pratos ou bandejas em uma torre de destilação?", "opcoes": ["Aumentar a pressão", "Promover o contato entre líquido e vapor", "Resfriar a carga", "Armazenar o óleo"], "resposta_correta": "Promover o contato entre líquido e vapor", "explicacao": "Os pratos permitem a troca de massa e calor necessária para a separação das frações."},
-    {"id": 13, "materia": "Refino", "pergunta": "O querosene de aviação (QAV) situa-se entre quais frações na destilação?", "opcoes": ["Gás e Nafta", "Nafta e Diesel", "Diesel e Gasóleo", "Resíduo e Asfalto"], "resposta_correta": "Nafta e Diesel", "explicacao": "O QAV é uma fração intermediária, mais leve que o diesel e mais pesada que a nafta."},
-    {"id": 14, "materia": "Refino", "pergunta": "Na Unidade de Recuperação de Enxofre (URE), o H2S é convertido em quê?", "opcoes": ["Ácido sulfúrico", "Enxofre elementar líquido", "Gás carbônico", "Água industrial"], "resposta_correta": "Enxofre elementar líquido", "explicacao": "O processo Claus converte o gás tóxico H2S em enxofre sólido ou líquido para venda."},
-    {"id": 15, "materia": "Refino", "pergunta": "O que caracteriza um petróleo 'doce' (sweet)?", "opcoes": ["Alto teor de açúcar", "Baixo teor de enxofre", "Alta densidade API", "Cor clara"], "resposta_correta": "Baixo teor de enxofre", "explicacao": "Petróleos com baixo enxofre são mais fáceis de refinar e menos corrosivos."},
-    {"id": 16, "materia": "Refino", "pergunta": "Qual o principal uso da Nafta produzida nas refinarias?", "opcoes": ["Combustível de navio", "Matéria-prima petroquímica", "Lubrificante de motor", "Pavimentação"], "resposta_correta": "Matéria-prima petroquímica", "explicacao": "A nafta é enviada para centrais petroquímicas para produzir plásticos e borrachas."},
-    {"id": 17, "materia": "Refino", "pergunta": "O que mede o Grau API?", "opcoes": ["A cor do óleo", "A acidez do petróleo", "A densidade relativa", "O ponto de fulgor"], "resposta_correta": "A densidade relativa", "explicacao": "Quanto maior o Grau API, mais leve é o petróleo."},
-    {"id": 18, "materia": "Refino", "pergunta": "Qual equipamento fornece calor para a carga da torre de destilação?", "opcoes": ["Condensador", "Permutador", "Forno", "Vaso de pressão"], "resposta_correta": "Forno", "explicacao": "O forno eleva a temperatura do petróleo até o ponto necessário para a vaporização parcial."},
-    {"id": 19, "materia": "Refino", "pergunta": "O que é 'cabeça de coluna' em uma torre de fracionamento?", "opcoes": ["A base da torre", "A parte mais alta", "O meio da torre", "A bomba de carga"], "resposta_correta": "A parte mais alta", "explicacao": "É onde saem os vapores mais leves da destilação."},
-    {"id": 20, "materia": "Refino", "pergunta": "Para que serve a injeção de vapor de água no fundo da torre (stripping)?", "opcoes": ["Aumentar a pressão", "Ajudar na remoção de leves das frações pesadas", "Limpar os pratos", "Esquentar o óleo"], "resposta_correta": "Ajudar na remoção de leves das frações pesadas", "explicacao": "O vapor diminui a pressão parcial e ajuda a 'arrastar' os leves para cima."},
-    {"id": 21, "materia": "Refino", "pergunta": "Qual fração é usada para produzir óleo lubrificante?", "opcoes": ["Gasolina", "Gasóleo de vácuo", "Gás natural", "Nafta leve"], "resposta_correta": "Gasóleo de vácuo", "explicacao": "As frações da destilação a vácuo são ideais para a base de lubrificantes."},
-    {"id": 22, "materia": "Refino", "pergunta": "O que é o craqueamento térmico?", "opcoes": ["Quebra por catalisador", "Quebra apenas pelo calor e pressão", "Mistura com água", "Separação magnética"], "resposta_correta": "Quebra apenas pelo calor e pressão", "explicacao": "Diferente do FCC, utiliza apenas energia térmica para quebrar as moléculas."},
-    {"id": 23, "materia": "Refino", "pergunta": "O gás de síntese é composto principalmente por:", "opcoes": ["Oxigênio e Nitrogênio", "Hidrogênio e Monóxido de Carbono", "Metano e Propano", "Cloro e Flúor"], "resposta_correta": "Hidrogênio e Monóxido de Carbono", "explicacao": "É a base para diversos processos na petroquímica."},
-    {"id": 24, "materia": "Refino", "pergunta": "Qual a principal função do decantador na dessalgação?", "opcoes": ["Esquentar a água", "Separar a fase óleo da fase água/sal", "Misturar o óleo", "Filtrar areia"], "resposta_correta": "Separar a fase óleo da fase água/sal", "explicacao": "A água salgada, sendo mais pesada, decanta no fundo do vaso."},
-    {"id": 25, "materia": "Refino", "pergunta": "O que ocorre na isomerização?", "opcoes": ["Quebra de cadeias", "Transformação de cadeias lineares em ramificadas", "Adição de enxofre", "Remoção de hidrogênio"], "resposta_correta": "Transformação de cadeias lineares em ramificadas", "explicacao": "Melhora a octanagem da gasolina sem mudar o número de carbonos."},
-    {"id": 26, "materia": "Refino", "pergunta": "Qual a cor típica do enxofre elementar recuperado?", "opcoes": ["Azul", "Preto", "Amarelo", "Verde"], "resposta_correta": "Amarelo", "explicacao": "O enxofre puro em estado sólido tem uma cor amarela característica."},
-    {"id": 27, "materia": "Refino", "pergunta": "O termo 'bottom of the barrel' refere-se a:", "opcoes": ["Melhor gasolina", "Frações mais pesadas e resíduos", "Gás de cozinha", "Querosene"], "resposta_correta": "Frações mais pesadas e resíduos", "explicacao": "Refere-se ao que sobra no fundo das torres após a destilação."},
-    {"id": 28, "materia": "Refino", "pergunta": "O que é um processo 'upstream'?", "opcoes": ["Refino e transporte", "Exploração e Produção", "Venda no posto", "Petroquímica"], "resposta_correta": "Exploração e Produção", "explicacao": "Upstream é o início da cadeia: achar e tirar o óleo do solo/mar."},
-    {"id": 29, "materia": "Refino", "pergunta": "O Diesel Marítimo exige maior ou menor viscosidade que o automotivo?", "opcoes": ["Igual", "Maior", "Menor", "Não tem viscosidade"], "resposta_correta": "Maior", "explicacao": "Motores de navios operam com combustíveis mais pesados e viscosos."},
-    {"id": 30, "materia": "Refino", "pergunta": "Qual unidade remove gases ácidos como CO2 e H2S?", "opcoes": ["Unidade de Destilação", "Unidade de Tratamento com Aminas", "Fornos", "Permutadores"], "resposta_correta": "Unidade de Tratamento com Aminas", "explicacao": "As aminas reagem com os gases ácidos para purificar as correntes de hidrocarbonetos."}
-    ]
+        # ==============================================================================
+        # ==============================================================================
+# MATÉRIA: INSTRUMENTAÇÃO E CONTROLE DE PROCESSOS
+# PADRÃO: CESGRANRIO (REALISMO TOTAL PETROBRAS)
+# CONTEÚDO: MALHAS, SENSORES E VÁLVULAS
+# STATUS: 100% ATUALIZADO ✅
+# ==============================================================================
+
+        {
+            "enunciado": "Durante uma ronda operacional em uma unidade de destilação, o operador observa que uma válvula de controle de nível de um vaso separador está com 100% de abertura, mas o nível continua subindo acima do Set Point. Ao verificar o instrumento, nota-se que o sinal de saída do controlador (MV) é de 20 mA. Considerando que a válvula é do tipo 'Falha-Fechada' (Air-to-Open), qual a causa mais provável para o desvio?",
+            "opcoes": [
+                "A) O suprimento de ar de instrumentos da válvula foi interrompido.",
+                "B) O posicionador da válvula está operando em malha aberta.",
+                "C) Houve perda de sinal elétrico (0 mA) no transmissor de nível.",
+                "D) A válvula está travada mecanicamente na posição aberta ou há obstrução na linha.",
+                "E) O controlador foi colocado em modo manual por erro de lógica."
+            ],
+            "correta": "D) A válvula está travada mecanicamente na posição aberta ou há obstrução na linha.",
+            "explicacao": "Se o sinal é 20mA (máximo) e a válvula é Air-to-Open, ela deveria estar totalmente aberta e dando vazão. Se o nível sobe mesmo com ela aberta, o problema é mecânico ou obstrução no fluxo."
+        },
+        
+        {
+            "enunciado": "Em sistemas de controle de processos químicos, a ação de controle Integral (I) é frequentemente utilizada em conjunto com a ação Proporcional (P). De acordo com a teoria de controle aplicada em refinarias, o principal objetivo técnico de inserir a ação Integral em uma malha de controle é:",
+            "opcoes": [
+                "A) Antecipar variações bruscas na variável de processo (PV).",
+                "B) Eliminar o erro de regime permanente (Offset) entre a PV e o Set Point.",
+                "C) Reduzir o tempo de resposta inicial da válvula de controle.",
+                "D) Estabilizar a malha em caso de ruídos de alta frequência no sensor.",
+                "E) Permitir que o controlador opere apenas com sinais pneumáticos."
+            ],
+            "correta": "B) Eliminar o erro de regime permanente (Offset) entre a PV e o Set Point.",
+            "explicacao": "A Cesgranrio cobra muito esse conceito: a ação Proporcional gera um erro residual (offset). Somente a ação Integral consegue zerar esse erro ao longo do tempo."
+        },
+        {
+            "enunciado": "Para a medição de temperatura em fornos de processo onde as temperaturas ultrapassam 1000°C, o sensor deve possuir alta robustez e ampla faixa de medição. Nestas condições, o instrumento mais adequado e comumente especificado nos projetos da Petrobras é o:",
+            "opcoes": [
+                "A) Termômetro bimetálico de haste rígida.",
+                "B) Sensor de resistência PT-100 (RTD).",
+                "C) Termopar tipo K (Cromel-Alumel).",
+                "D) Termômetro de enchimento de mercúrio.",
+                "E) Pressostato diferencial de temperatura."
+            ],
+            "correta": "C) Termopar tipo K (Cromel-Alumel).",
+            "explicacao": "Enquanto o PT-100 é mais preciso para temperaturas baixas e médias, os termopares (especialmente o tipo K) são os preferidos para altas temperaturas de fornos devido à sua durabilidade e faixa de medição."
+        },
+
     
-     
-    ]
-    
-        # --- MATÉRIA 03: PROCESSOS DE REFINO E PETROQUÍMICA ---
         {
             "enunciado": "O processo de Craqueamento Catalítico Fluido (FCC) é uma das unidades mais rentáveis de uma refinaria. Qual a principal transformação química que ocorre nesse processo e qual o seu objetivo comercial?",
             "opcoes": ["A) Unir moléculas leves para formar polímeros de alta densidade.", "B) Quebrar moléculas pesadas de hidrocarbonetos em frações mais leves e valiosas, como gasolina e GLP.", "C) Remover nitrogênio e enxofre através da reação com hidrogênio gasoso.", "D) Transformar óleo diesel em óleo lubrificante de alta viscosidade.", "E) Separar mecanicamente a água salgada do petróleo bruto."],
