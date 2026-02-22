@@ -1,47 +1,54 @@
 import streamlit as st
 
-# Configuração da página (Isso ajuda no design limpo)
 st.set_page_config(page_title="Mentor Petrobras", layout="centered")
 
-# Título Principal
 st.title("⚓ Mentor Petrobras")
-st.subheader("Preparatório: Operador de Produção e Lastro")
+st.subheader("Simulado Inteligente")
 
-# Barra Lateral para navegação
-with st.sidebar:
-    st.header("Configurações")
-    cargo = st.selectbox(
-        "Escolha seu cargo:",
-        ("Operador de Produção", "Operador de Lastro")
-    )
-    st.write("---")
-    st.write("Modo: Estudo Ativo")
-
-# Área de Conteúdo
-st.info(f"Estudando para: **{cargo}**")
-
-# Simulação de Questão (Foco em Elétrica/Segurança - Sua área!)
-st.markdown("### Questão de Conhecimentos Específicos")
-st.write("**De acordo com a NR-10, qual é o foco principal da norma em instalações elétricas?**")
-
-# Alternativas com botões de rádio
-alternativas = [
-    "A) Apenas a estética da fiação",
-    "B) Garantir a segurança e saúde dos trabalhadores",
-    "C) Aumentar o desperdício de energia",
-    "D) Evitar apenas o uso de ferramentas manuais"
+# Banco de Dados de Perguntas (Podemos poner miles aquí)
+questoes = [
+    {
+        "pergunta": "De acordo com a NR-10, qual o foco principal?",
+        "opcoes": ["Estética", "Segurança e Saúde", "Economia", "Iluminação"],
+        "correta": "Segurança e Saúde"
+    },
+    {
+        "pergunta": "Qual equipamento é usado para elevar a pressão de um fluido líquido?",
+        "opcoes": ["Compressor", "Válvula", "Bomba Centrifuga", "Permutador"],
+        "correta": "Bomba Centrifuga"
+    },
+    {
+        "pergunta": "Na estabilidade de navios (Lastro), o que é o Metacentro?",
+        "opcoes": ["O fundo do navio", "Um ponto de referência para estabilidade", "O peso da carga", "A âncora"],
+        "correta": "Um ponto de referência para estabilidade"
+    }
 ]
 
-resposta = st.radio("Selecione a opção correta:", alternativas)
+# Sistema de navegação simples usando o índice da pergunta
+if 'indice' not in st.session_state:
+    st.session_state.indice = 0
 
-# Botão de Confirmação
+q = questoes[st.session_state.indice]
+
+st.write(f"### Questão {st.session_state.indice + 1}")
+st.write(f"**{q['pergunta']}**")
+
+resposta = st.radio("Escolha a opção:", q['opcoes'], key=f"q_{st.session_state.indice}")
+
 if st.button("Confirmar Resposta"):
-    if "B)" in resposta:
-        st.success("✅ Resposta Correta! Você dominou esse conceito de NR-10.")
-        st.balloons()
+    if resposta == q['correta']:
+        st.success("✅ Correto!")
     else:
-        st.error("❌ Resposta Incorreta. Revise os conceitos fundamentais da NR-10.")
+        st.error(f"❌ Errado! A resposta era: {q['correta']}")
 
-# Rodapé simples
-st.markdown("---")
-st.caption("Desenvolvido por Roberlande | Foco: Operador Petrobras")
+# Botão para ir para a próxima
+if st.button("Próxima Questão ➡️"):
+    if st.session_state.indice < len(questoes) - 1:
+        st.session_state.indice += 1
+        st.rerun()
+    else:
+        st.write("🎉 Você terminou o simulado de teste!")
+        if st.button("Recomeçar"):
+            st.session_state.indice = 0
+            st.rerun()
+            
