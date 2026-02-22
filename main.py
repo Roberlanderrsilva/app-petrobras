@@ -329,7 +329,7 @@ if 'questoes_db' not in st.session_state:
         {
             "enunciado": "O EPC (Equipamento de Proteção Coletiva) tem prioridade sobre o EPI (Equipamento de Proteção Individual) porque:",
             "opcoes": ["A) O EPC é mais barato.", "B) O EPC elimina ou reduz o risco na fonte, protegendo todos os trabalhadores simultaneamente.", "C) O EPI é opcional na indústria do petróleo.", "D) O EPC não precisa de manutenção.", "E) O uso do EPI causa desconforto térmico."],
-
+        },
         # --- MATÉRIA 01: OPERAÇÕES UNITÁRIAS (BOMBAS, TROCADORES, DESTILAÇÃO) ---
         {
             "enunciado": "Em uma unidade de hidrotratamento, uma bomba centrífuga de grande porte apresenta sinais de instabilidade, com flutuações na pressão de descarga e ruído característico de 'pinhão sendo triturado'. O operador suspeita de cavitação no primeiro estágio da bomba. Considerando a termodinâmica do processo, qual ação operacional imediata poderia mitigar a cavitação sem interromper o fluxo?",
