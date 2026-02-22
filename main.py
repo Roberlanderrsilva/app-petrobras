@@ -451,50 +451,7 @@ if 'questoes_db' not in st.session_state:
             "enunciado": "O fenômeno conhecido como 'Primado' (carry-over) em caldeiras a vapor consiste no arraste de gotículas de líquido junto com o vapor para a linha de saída. Uma das causas operacionais para o primado é:",
             "opcoes": ["A) Baixo nível de água no tubulão.", "B) Alta concentração de sólidos dissolvidos e excesso de produtos químicos na água (espumamento).", "C) Pressão de vapor muito acima da nominal.", "D) Uso de combustível com baixo poder calorífico.", "E) Excesso de purga de fundo."],
             "correta": "B) Alta concentração de sólidos dissolvidos e excesso de produtos químicos na água (espumamento).",
-            "explicacao": "A contaminação da água causa bolhas estáveis (espuma), que são arrastadas pelo vapor, podendo causar danos em turbinas e trocadores."
-        },
-        {
-            "enunciado": "Em uma bomba centrífuga, a função da voluta (ou carcaça em espiral) é:",
-            "opcoes": ["A) Aumentar a velocidade do fluido que sai do rotor.", "B) Converter a energia cinética (velocidade) fornecida pelo rotor em energia de pressão.", "C) Filtrar as impurezas sólidas antes da descarga.", "D) Reduzir o peso total do equipamento para facilitar o suporte.", "E) Resfriar o selo mecânico através de dissipação natural."],
-            "correta": "B) Converter a energia cinética (velocidade) fornecida pelo rotor em energia de pressão.",
-            "explicacao": "A geometria da voluta, com área crescente, faz com que a velocidade diminua e a pressão aumente (Princípio de Bernoulli)."
-        },
-        {
-            "enunciado": "O condensador de topo de uma torre de destilação tem a função de transformar o vapor de topo em líquido. Parte desse líquido retorna à torre (refluxo) e a outra parte segue como produto. Se o refluxo for interrompido, o que acontece com o perfil de pureza no topo?",
-            "opcoes": ["A) A pureza aumenta drasticamente.", "B) A pureza diminui, pois vapores mais pesados não serão condensados e sairão com o produto.", "C) O perfil de pureza não se altera.", "D) A torre entra em vácuo instantaneamente.", "E) O produto de fundo torna-se mais leve."],
-            "correta": "B) A pureza diminui, pois vapores mais pesados não serão condensados e sairão com o produto.",
-            "explicacao": "Sem refluxo, não há 'lavagem' do vapor ascendente, permitindo que frações pesadas contaminem o produto leve de topo."
-        },
-        {
-            "enunciado": "Ejetores a vácuo, comuns em colunas de destilação a vácuo, operam baseados em qual princípio?",
-            "opcoes": ["A) Compressão mecânica por pistões de alta frequência.", "B) Efeito Venturi, utilizando um fluido motriz (geralmente vapor) em alta velocidade.", "C) Resfriamento criogênico dos gases residuais.", "D) Atração eletrostática de moléculas de hidrocarbonetos.", "E) Reação de combustão interna controlada."],
-            "correta": "B) Efeito Venturi, utilizando um fluido motriz (geralmente vapor) em alta velocidade.",
-            "explicacao": "O vapor motriz passa por um bocal convergente-divergente, criando uma zona de baixa pressão que succiona os gases da torre."
-        },
-        {
-            "enunciado": "Em permutadores de calor do tipo placa, qual a principal vantagem em relação aos de casco e tubos para aplicações com fluidos limpos?",
-            "opcoes": ["A) Suportam pressões e temperaturas muito mais elevadas.", "B) Ocupam maior área de instalação (pegada industrial).", "C) Elevado coeficiente de transferência de calor e facilidade de ampliação da área de troca.", "D) São imunes a qualquer tipo de corrosão química.", "E) Não exigem gaxetas ou juntas de vedação."],
-            "correta": "C) Elevado coeficiente de transferência de calor e facilidade de ampliação da área de troca.",
-            "explicacao": "Trocadores de placa são muito compactos e eficientes, permitindo adicionar mais placas para aumentar a capacidade térmica."
-        },
-        {
-            "enunciado": "Qual o componente de uma caldeira aquatubular responsável por separar o vapor saturado da água líquida antes do superaquecimento?",
-            "opcoes": ["A) Fornalha.", "B) Tubulão de vapor (Steam Drum).", "C) Economizador.", "D) Soprador de fuligem.", "E) Pré-aquecedor de ar."],
-            "correta": "B) Tubulão de vapor (Steam Drum).",
-            "explicacao": "No tubulão superior, a água pesada fica embaixo e o vapor sobe para ser coletado, evitando arraste de líquido."
-        },
-        {
-            "enunciado": "A vedação entre o eixo rotativo e a carcaça de uma bomba centrífuga para evitar vazamentos de fluidos perigosos é feita preferencialmente por:",
-            "opcoes": ["A) Gaxetas de amianto.", "B) Selos mecânicos.", "C) Juntas de cortiça.", "D) Buchas de bronze.", "E) Anéis de borracha simples."],
-            "correta": "B) Selos mecânicos.",
-            "explicacao": "Selos mecânicos oferecem vedação superior, menor atrito e menos vazamentos que as antigas gaxetas, sendo padrão na indústria do petróleo."
-        },
-        {
-            "enunciado": "Em uma torre de destilação, a região situada acima do prato de alimentação é denominada:",
-            "opcoes": ["A) Seção de esgotamento (stripping section).", "B) Seção de retificação (rectifying section).", "C) Zona de flash.", "D) Bacia de acumulação.", "E) Plenum de descarga."],
-            "correta": "B) Seção de retificação (rectifying section).",
-            "explicacao": "A seção de retificação é onde ocorre o enriquecimento do vapor nos componentes mais voláteis."
-        },
+
             
   ]
     random.shuffle(db_original) 
