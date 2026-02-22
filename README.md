@@ -1,32 +1,29 @@
-# # Petrobras Aprova 🚀
+# 📝 Petrobras Aprova: Plataforma de Simulados para Operador de Produção
 
 <p align="center">
   <img src="banner_petrobras.png" alt="Petrobras Aprova Logo" width="100%">
 </p>
 
-## 📋 Sobre o Projeto
-O **Petrobras Aprova** é um aplicativo desenvolvido em **Python** com a biblioteca **Streamlit**, focado na preparação estratégica para o concurso da Petrobras. O objetivo é centralizar questões de estudos, legislação específica e métricas de desempenho em uma interface intuitiva e profissional.
+## 🎯 Treine como se estivesse na Prova
+O **Petrobras Aprova** é uma plataforma focada exclusivamente em **Simulados Estratégicos**. Sabemos que a teoria é importante, mas é o treino com questões que garante a vaga. 
+
+Desenvolvido para futuros **Operadores de Produção**, este Web App permite que você teste seus conhecimentos em tempo real, focando na agilidade e na precisão técnica.
 
 ---
 
-## 🎯 Objetivos do Aplicativo
-- **Banco de Dados de Questões:** Organização de perguntas focadas no edital.
-- **Visualização de Desempenho:** Gráficos interativos para acompanhar a evolução nos estudos.
-- **Foco em Legislação:** Acesso rápido às normas técnicas e leis exigidas pela banca.
-- **Preparação Multilíngue:** Interface pensada para facilitar o treino de termos técnicos em Espanhol e Inglês.
+## 💎 Funcionalidades Focadas no Resultado
+- **Simulados de Operação de Produção:** Questões específicas sobre processos de extração, refino, bombas, compressores e NR-13.
+- **Cronômetro de Prova:** Treine seu tempo de resposta para não ser pego de surpresa no dia do concurso.
+- **Feedback Imediato:** Errou a questão? O app te mostra o caminho certo na hora.
+- **Histórico de Performance:** Acompanhe sua pontuação e veja se você já está no nível da nota de corte da Petrobras.
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
-- **Linguagem:** Python 3.x
-- **Interface:** Streamlit
-- **Processamento de Dados:** Pandas
-- **Controle de Versão:** GitHub
+## 🛠️ Por dentro da Ferramenta
+- **Motor de Questões:** Desenvolvido em **Python** para selecionar perguntas de forma aleatória e inteligente.
+- **Dashboard de Usuário:** Interface em **Streamlit** que simula o ambiente de prova de forma limpa e profissional.
+
+
 
 ---
-
-## 🚀 Como Executar
-1. Certifique-se de ter o Python instalado.
-2. Instale as dependências:
-   ```bash
-   pip install streamlit pandas
+**Desenvolvido por RRSilva** *Seu esforço, sua vaga. O melhor simulador para o Operador do futuro!* 🇧🇷💧
