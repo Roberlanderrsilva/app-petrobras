@@ -86,6 +86,7 @@ if 'questoes_db' not in st.session_state:
             "correta": "Petroquímica (plásticos, borrachas, fertilizantes)",
             "explicacao": "A nafta é enviada para centrais petroquímicas onde é transformada em produtos básicos para fazer plásticos e químicos."
         }
+            
         ]
     
     random.shuffle(db_original)
