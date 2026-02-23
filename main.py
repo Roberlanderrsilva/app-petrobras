@@ -1,4 +1,4 @@
-yoimport streamlit as st
+import streamlit as st
 import random 
 
 # --- SISTEMA DE CORES E CONTRASTE (COLE AQUI) ---
