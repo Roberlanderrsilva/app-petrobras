@@ -148,44 +148,46 @@ if 'questoes_db' not in st.session_state:
                 "C) A válvula é de ação manual e não possui atuador.",
                 "D) O processo é muito lento e não exige precisão.",
                 "E) O sinal de controle é exclusivamente digital via Wi-Fi."
-            ],
-            "correta": "B) Há necessidade de minimizar os efeitos de atrito na gaxeta e histerese.",
-            "explicacao": "O posicionador corrige desvios causados pelo atrito da haste, garantindo que a válvula abra exatamente o que o controlador pediu."
-        }
-            
-            
-  ],
-    random.shuffle(db_original) 
-    st.session_state.questoes_db = db_original
-
-questoes = st.session_state.questoes_db
-
-# --- LÓGICA DO APP (REVISADA) ---
+            ],# --- LÓGICA DO APP (REVISADA PELA ANDRESSA) ---
 if 'indice' not in st.session_state:
     st.session_state.indice = 0
     st.session_state.mostrar_explica = False
 
- if st.session_state.indice < len(questoes):
- if st.session_state.indice < len(questoes):
+if st.session_state.indice < len(questoes):
     q = questoes[st.session_state.indice]
     st.subheader(f"Questão {st.session_state.indice + 1} de {len(questoes)}")
     
-    # --- BOX COM ALTO CONTRASTE (NOVO) ---
+    # --- BOX COM ALTO CONTRASTE ---
     st.markdown(f"""
-        <div style="
-            background-color: {cor_fundo_box}; 
-            padding: 20px; 
-            border-radius: 12px; 
-            border: 3px solid #3b82f6; 
-            margin-bottom: 20px;">
-            <p style="
-                color: {cor_texto_quest}; 
-                font-size: 20px; 
-                font-weight: bold; 
-                line-height: 1.6;
-                margin: 0;">
+        <div style="background-color: {cor_fundo_box}; padding: 20px; border-radius: 12px; border: 3px solid #3b82f6; margin-bottom: 20px;">
+            <p style="color: {cor_texto_quest}; font-size: 20px; font-weight: bold; line-height: 1.6; margin: 0;">
                 {q['enunciado']}
             </p>
         </div>
         """, unsafe_allow_html=True)
-    
+
+    resposta = st.radio("Escolha a alternativa:", q['opcoes'], key=f"rad_{st.session_state.indice}")
+
+    if st.button("Confirmar Resposta"):
+        if resposta == q['correta']:
+            st.success("✅ CORRETO!")
+        else:
+            st.error(f"❌ INCORRETO! A resposta certa era: {q['correta']}")
+        st.session_state.mostrar_explica = True
+
+    if st.session_state.mostrar_explica:
+        st.info(f"**Explicação:** {q['explicacao']}")
+        if st.button("Próxima Questão ➡️"):
+            st.session_state.indice += 1
+            st.session_state.mostrar_explica = False
+            st.rerun()
+else:
+    st.balloons()
+    st.success("🎉 Você concluiu o bloco de questões!")
+    if st.button("Recomeçar e Embaralhar"):
+        if 'questoes_db' in st.session_state:
+            del st.session_state.questoes_db 
+        st.session_state.indice = 0
+        st.session_state.mostrar_explica = False
+        st.rerun()
+        
