@@ -85,7 +85,188 @@ if 'questoes_db' not in st.session_state:
             "opcoes": ["Alimentícia", "Petroquímica (plásticos, borrachas, fertilizantes)", "Construção civil pesada", "Têxtil de algodão"],
             "correta": "Petroquímica (plásticos, borrachas, fertilizantes)",
             "explicacao": "A nafta é enviada para centrais petroquímicas onde é transformada em produtos básicos para fazer plásticos e químicos."
-        }
+        },
+                {
+            "enunciado": "Qual é a principal função de uma bomba centrífuga em uma instalação industrial?",
+            "opcoes": ["Aumentar a temperatura de um gás", "Transferir energia cinética a um fluido para transformá-la em energia de pressão", "Medir a vazão de sólidos", "Resfriar o óleo lubrificante"],
+            "correta": "Transferir energia cinética a um fluido para transformá-la em energia de pressão",
+            "explicacao": "A bomba centrífuga utiliza um rotor para acelerar o líquido, e a carcaça (voluta) converte essa velocidade em pressão."
+        },
+        {
+            "enunciado": "O fenômeno da cavitação em bombas centrífugas ocorre quando:",
+            "opcoes": ["A pressão do líquido cai abaixo da sua pressão de vapor, formando bolhas que implodem", "O motor elétrico gira rápido demais", "O fluido está muito quente", "Há excesso de lubrificante nos mancais"],
+            "correta": "A pressão do líquido cai abaixo da sua pressão de vapor, formando bolhas que implodem",
+            "explicacao": "A cavitação causa ruído, vibração e pode destruir o rotor da bomba devido ao impacto das implosões das bolhas de vapor."
+        },
+        {
+            "enunciado": "Para evitar a cavitação, é necessário garantir que o valor de ________ seja superior ao requerido pela bomba.",
+            "opcoes": ["Vazão", "NPSH disponível", "Temperatura externa", "Tensão elétrica"],
+            "correta": "NPSH disponível",
+            "explicacao": "O NPSH (Net Positive Suction Head) disponível deve ser sempre maior que o requerido pelo fabricante para evitar a formação de bolhas no bocal de sucção."
+        },
+        {
+            "enunciado": "Qual tipo de compressor é mais indicado para grandes vazões e pressões moderadas em refinarias?",
+            "opcoes": ["Compressor de Pistão", "Compressor Centrífugo", "Compressor de Palhetas", "Compressor de Diafragma"],
+            "correta": "Compressor Centrífugo",
+            "explicacao": "Os compressores centrífugos (dinâmicos) são ideais para processos contínuos que exigem grandes volumes de gás, como no craqueamento catalítico."
+        },
+        {
+            "enunciado": "A função primordial do selo mecânico em uma bomba é:",
+            "opcoes": ["Aumentar a vazão", "Evitar o vazamento de fluido entre o eixo rotativo e a carcaça da bomba", "Alinhar o motor", "Reduzir o consumo de energia"],
+            "correta": "Evitar o vazamento de fluido entre o eixo rotativo e a carcaça da bomba",
+            "explicacao": "O selo mecânico substitui as antigas gaxetas, oferecendo uma vedação muito mais eficiente e segura para produtos perigosos."
+        },
+        {
+            "enunciado": "O 'Surge' (Surto) em compressores centrífugos é um fenômeno perigoso que consiste em:",
+            "opcoes": ["Um aumento repentino na temperatura do ar", "A inversão cíclica do fluxo de gás, podendo causar danos mecânicos graves", "O travamento total do eixo", "Vazamento de óleo pelo selo"],
+            "correta": "A inversão cíclica do fluxo de gás, podendo causar danos mecânicos graves",
+            "explicacao": "O surge ocorre quando a vazão cai abaixo de um limite crítico e a pressão de descarga empurra o gás de volta para dentro do compressor."
+        },
+        {
+            "enunciado": "Bombas de deslocamento positivo (como as de engrenagem) são preferíveis às centrífugas quando:",
+            "opcoes": ["O fluido tem baixíssima viscosidade", "O fluido é muito viscoso (como óleo pesado) ou exige dosagem precisa", "A vazão é extremamente alta", "Não há necessidade de pressão"],
+            "correta": "O fluido é muito viscoso (como óleo pesado) ou exige dosagem precisa",
+            "explicacao": "Bombas de deslocamento positivo movem um volume fixo a cada rotação, sendo eficientes com fluidos grossos onde a centrífuga falharia."
+        },
+        {
+            "enunciado": "O que acontece se uma bomba centrífuga operar com a válvula de descarga totalmente fechada por muito tempo (Shut-off)?",
+            "opcoes": ["A bomba gasta menos energia", "O fluido aquece rapidamente devido ao atrito, podendo danificar vedações e partes internas", "A pressão cai para zero", "O motor para automaticamente"],
+            "correta": "O fluido aquece rapidamente devido ao atrito, podendo danificar vedações e partes internas",
+            "explicacao": "Sem fluxo para levar o calor embora, a energia do motor é convertida em calor no líquido parado dentro da carcaça."
+        },
+        {
+            "enunciado": "Em um compressor de pistão (alternativo), a função das válvulas de sucção e descarga é:",
+            "opcoes": ["Controlar a velocidade do motor", "Garantir o fluxo unidirecional do gás durante os ciclos de compressão", "Misturar óleo ao gás", "Resfriar o cilindro"],
+            "correta": "Garantir o fluxo unidirecional do gás durante os ciclos de compressão",
+            "explicacao": "As válvulas abrem e fecham por diferença de pressão, permitindo que o gás entre no cilindro e saia apenas para a linha de descarga."
+        },
+        {
+            "enunciado": "Qual componente é responsável por transmitir o movimento do motor para o eixo da bomba?",
+            "opcoes": ["Rotor", "Acoplamento", "Voluta", "Mancal"],
+            "correta": "Acoplamento",
+            "explicacao": "O acoplamento une o eixo do motor ao eixo da bomba, permitindo a transmissão de torque e absorvendo pequenas vibrações ou desalinhamentos."
+        },        {
+            "enunciado": "De acordo com a NR-13, qual é o documento obrigatório que deve conter o histórico de todas as inspeções de segurança de uma caldeira ou vaso de pressão?",
+            "opcoes": ["Prontuário da Caldeira", "Livro de Registro de Segurança", "Certificado de Garantia", "Manual do Fabricante"],
+            "correta": "Livro de Registro de Segurança",
+            "explicacao": "O Livro de Registro de Segurança é onde o PH (Profissional Habilitado) anota todas as ocorrências e inspeções, sendo vital para a rastreabilidade da segurança."
+        },
+        {
+            "enunciado": "A NR-20 classifica as instalações que trabalham com inflamáveis e combustíveis em três classes (I, II e III). Uma refinaria de petróleo enquadra-se geralmente em qual classe?",
+            "opcoes": ["Classe I", "Classe II", "Classe III", "Classe IV"],
+            "correta": "Classe III",
+            "explicacao": "As refinarias são instalações de alta complexidade e grande volume de inflamáveis, sendo classificadas como Classe III pela NR-20."
+        },
+        {
+            "enunciado": "O que deve ser feito imediatamente se for detectado que uma caldeira está a operar sem os seus dispositivos de segurança (como a válvula de segurança)?",
+            "opcoes": ["Continuar a operação com cuidado", "Solicitar manutenção para a próxima semana", "Interromper a operação imediatamente (Parada de Emergência)", "Aumentar a pressão para testar"],
+            "correta": "Interromper a operação imediatamente (Parada de Emergência)",
+            "explicacao": "Operar sem dispositivos de segurança é considerado um Risco Grave e Iminente (RGI), exigindo a paragem imediata do equipamento."
+        },
+        {
+            "enunciado": "Segundo a NR-20, o Prontuário da Instalação deve conter o 'Plano de Resposta a Emergências'. Qual o objetivo deste plano?",
+            "opcoes": ["Controlar o stock de óleo", "Definir ações para minimizar impactos de acidentes e proteger os trabalhadores", "Calcular o lucro da empresa", "Organizar as férias dos funcionários"],
+            "correta": "Definir ações para minimizar impactos de acidentes e proteger os trabalhadores",
+            "explicacao": "O Plano de Resposta a Emergências detalha como agir em caso de fugas, incêndios ou explosões para salvar vidas e o ambiente."
+        },
+        {
+            "enunciado": "Na NR-13, os vasos de pressão são classificados em categorias. Quais as principais variáveis usadas para definir estas categorias?",
+            "opcoes": ["Cor e Peso", "Pressão e Temperatura", "Classe de fluido e o produto P.V (Pressão x Volume)", "Apenas o tipo de aço utilizado"],
+            "correta": "Classe de fluido e o produto P.V (Pressão x Volume)",
+            "explicacao": "A categoria do vaso (de 1 a 5) depende do quão perigoso é o fluido e da energia armazenada (pressão multiplicada pelo volume)."
+        },
+        {
+            "enunciado": "O Exame de Estanqueidade em tubulações que transportam inflamáveis deve ser realizado:",
+            "opcoes": ["Apenas quando há uma fuga visível", "Periodicamente, conforme o plano de inspeção da instalação", "Uma vez a cada 20 anos", "Nunca, tubulações não precisam de exame"],
+            "correta": "Periodicamente, conforme o plano de inspeção da instalação",
+            "explicacao": "A estanqueidade garante que não existem micro-fugas que possam causar explosões ou contaminação ambiental."
+        },
+        {
+            "enunciado": "A sigla 'TH' na NR-13 refere-se a um teste fundamental após reparações importantes. O que significa?",
+            "opcoes": ["Teste de Humidade", "Teste Hidrostático", "Teste de Hidrogénio", "Temperatura Homogénea"],
+            "correta": "Teste Hidrostático",
+            "explicacao": "O Teste Hidrostático usa água sob pressão para verificar a resistência estrutural e a ausência de fugas em equipamentos sob pressão."
+        },
+        {
+            "enunciado": "Qual o equipamento de proteção coletiva (EPC) mais comum em áreas de transferência de inflamáveis para evitar a ignição por eletricidade estática?",
+            "opcoes": ["Extintor de pó", "Ligação à terra (Aterramento)", "Sirene de alarme", "Cones de sinalização"],
+            "correta": "Ligação à terra (Aterramento)",
+            "explicacao": "O aterramento drena a eletricidade estática acumulada, impedindo que faíscas iniciem um incêndio durante a carga ou descarga de inflamáveis."
+        },
+        {
+            "enunciado": "A inspeção de segurança inicial de um vaso de pressão deve ser feita:",
+            "opcoes": ["Após 1 ano de uso", "Somente se o vaso apresentar defeito", "Antes do vaso ser colocado em operação", "Quando o PH tiver tempo livre"],
+            "correta": "Antes do vaso ser colocado em operação",
+            "explicacao": "Nenhum vaso de pressão pode começar a trabalhar sem a inspeção inicial que garanta que foi instalado corretamente e está seguro."
+        },
+        {
+            "enunciado": "Em caso de 'Risco Grave e Iminente' detectado durante uma inspeção, o PH (Profissional Habilitado) tem o dever de:",
+            "opcoes": ["Anotar e esperar o relatório mensal", "Ignorar se a produção estiver alta", "Determinar a paragem do equipamento e comunicar a gerência", "Tentar consertar sozinho com o equipamento ligado"],
+            "correta": "Determinar a paragem do equipamento e comunicar a gerência",
+            "explicacao": "A segurança das pessoas vem sempre primeiro; o PH deve paralisar qualquer operação que coloque vidas em risco direto."
+        },        {
+            "enunciado": "Na instrumentação industrial, o que significa a sigla 'PT' gravada num fluxograma de processo?",
+            "opcoes": ["Painel Totalizador", "Transmissor de Pressão (Pressure Transmitter)", "Ponto de Temperatura", "Purga de Tubagem"],
+            "correta": "Transmissor de Pressão (Pressure Transmitter)",
+            "explicacao": "A sigla PT indica um instrumento que mede a pressão num ponto e envia o sinal para uma sala de controlo ou indicador."
+        },
+        {
+            "enunciado": "Qual é a função de uma 'Válvula de Controlo' num sistema de malha fechada?",
+            "opcoes": ["Apenas abrir ou fechar totalmente o fluxo", "Atuar como o elemento final de controlo para ajustar a vazão conforme o sinal do controlador", "Medir a temperatura do fluido", "Proteger o sistema contra explosões"],
+            "correta": "Atuar como o elemento final de controlo para ajustar a vazão conforme o sinal do controlador",
+            "explicacao": "A válvula de controlo modula a abertura (ex: 30%, 50%) para manter uma variável como nível ou pressão no valor desejado (setpoint)."
+        },
+        {
+            "enunciado": "O que acontece numa válvula de controlo do tipo 'Falha Aberta' (FO - Fail Open) se houver perda do suprimento de ar comprimido?",
+            "opcoes": ["A válvula trava na última posição", "A válvula fecha-se totalmente por segurança", "A válvula abre-se totalmente por ação de uma mola", "A válvula explode"],
+            "correta": "A válvula abre-se totalmente por ação de uma mola",
+            "explicacao": "Válvulas FO são projetadas para que, em caso de falha de energia ou ar, a mola force a abertura total (comum em sistemas de resfriamento)."
+        },
+        {
+            "enunciado": "O instrumento utilizado para medir a diferença de pressão entre dois pontos, muito comum na medição de nível e vazão, é o:",
+            "opcoes": ["Termómetro", "Transmissor de Pressão Diferencial (DPT)", "Voltímetro", "Densímetro"],
+            "correta": "Transmissor de Pressão Diferencial (DPT)",
+            "explicacao": "O DPT mede a diferença entre dois pontos; na vazão, mede a queda de pressão numa placa de orifício para calcular o fluxo."
+        },
+        {
+            "enunciado": "Numa malha de controlo, o que representa o 'Setpoint' (SP)?",
+            "opcoes": ["O valor real que o sensor está a ler agora", "O valor desejado que o operador define para uma variável (ex: manter a 50°C)", "O erro entre a leitura e a realidade", "A velocidade de rotação da bomba"],
+            "correta": "O valor desejado que o operador define para uma variável (ex: manter a 50°C)",
+            "explicacao": "O Setpoint é o alvo. O controlador trabalha para que a Variável de Processo (PV) fique igual ao Setpoint (SP)."
+        },
+        {
+            "enunciado": "A sigla 'TIC' num diagrama de instrumentação refere-se a um:",
+            "opcoes": ["Transmissor Indicador de Corrente", "Controlador Indicador de Temperatura", "Tubo de Inspeção de Caldeira", "Teste de Interrupção de Circuito"],
+            "correta": "Controlador Indicador de Temperatura",
+            "explicacao": "O TIC (Temperature Indicator Controller) lê a temperatura e decide se deve abrir ou fechar uma válvula para controlá-la."
+        },
+        {
+            "enunciado": "Qual destes sensores é o mais indicado para medir temperaturas elevadas em fornos de refinaria?",
+            "opcoes": ["Termómetro de mercúrio", "Termopar", "Bóia de nível", "Manómetro"],
+            "correta": "Termopar",
+            "explicacao": "Os termopares são sensores robustos feitos de dois metais diferentes que geram uma milivoltagem proporcional ao calor, ideais para altas temperaturas."
+        },
+        {
+            "enunciado": "O 'PLC' (ou CLP em português) é um equipamento fundamental na automação. O que significa a sigla?",
+            "opcoes": ["Controlador Lógico Programável", "Circuito de Ligação Permanente", "Compressor de Leve Carga", "Painel de Leitura Central"],
+            "correta": "Controlador Lógico Programável",
+            "explicacao": "O PLC é o 'cérebro' eletrónico que executa a lógica de controlo de máquinas e processos industriais."
+        },
+        {
+            "enunciado": "O que é uma 'Placa de Orifício'?",
+            "opcoes": ["Um dispositivo de segurança contra incêndios", "Um elemento primário para medição de vazão por diferencial de pressão", "Uma peça para tapar buracos em tanques", "Um tipo de filtro de óleo"],
+            "correta": "Um elemento primário para medição de vazão por diferencial de pressão",
+            "explicacao": "É um disco com um furo no meio colocado na tubagem. A restrição gera uma diferença de pressão que permite calcular a vazão."
+        },
+        {
+            "enunciado": "O sinal de transmissão padrão analógico mais utilizado na instrumentação industrial é:",
+            "opcoes": ["0 a 100 Volts", "4 a 20 mA (miliamperes)", "10 a 50 Amperes", "0 a 5 Volts"],
+            "correta": "4 a 20 mA (miliamperes)",
+            "explicacao": "O padrão 4-20mA é o mais usado porque permite detetar cabos rompidos (se o sinal for 0mA, há erro) e é resistente a ruídos elétricos."
+        },
+            
+        
+        
     ]
     random.shuffle(db_original)
     st.session_state.questoes_db = db_original
