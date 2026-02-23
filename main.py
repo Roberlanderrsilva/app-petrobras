@@ -10,10 +10,9 @@ st.write("---")
 # --- BANCO DE DADOS: BLOCO 01 (50 QUESTÕES) ---
 if 'questoes_db' not in st.session_state:
     db_original = [    
-        # Bloco de questões para o Aplicativo "Mentor" - Petrobras (Operador)
-# ==========================================
-# BLOCO DE TESTE: PADRÃO CESGRANRIO MASTER
-# ==========================================
+     # ==============================================================================
+# BLOCO: INSTRUMENTAÇÃO (QUESTÕES 04 A 10) - PADRÃO CESGRANRIO
+# ==============================================================================
         {
             "enunciado": "Em uma unidade de destilação atmosférica, o operador nota que a temperatura no topo da torre está acima do valor de Set Point, comprometendo a especificação da Nafta. Para corrigir esse desvio e garantir o fracionamento adequado, a ação operacional imediata deve ser:",
             "opcoes": [
@@ -49,7 +48,95 @@ if 'questoes_db' not in st.session_state:
             ],
             "correta": "B) Tubo de Bourdon.",
             "explicacao": "O tubo de Bourdon converte a pressão interna em movimento mecânico do ponteiro, sendo o padrão para manômetros locais pela sua robustez e simplicidade."
+        },
+        
+        {
+            "enunciado": "Em uma malha de controle de vazão que utiliza uma placa de orifício como elemento primário, o transmissor de pressão diferencial (DP) indica um valor de 25% da escala de pressão. De acordo com a relação quadrática entre vazão e pressão diferencial, qual o valor percentual da vazão correspondente?",
+            "opcoes": [
+                "A) 12,5%",
+                "B) 25,0%",
+                "C) 50,0%",
+                "D) 62,5%",
+                "E) 100,0%"
+            ],
+            "correta": "C) 50,0%",
+            "explicacao": "Na medição por placa de orifício, a vazão é proporcional à raiz quadrada da pressão diferencial. Raiz de 0,25 (25%) é igual a 0,50 (50%)."
+        },
+        
+        {
+            "enunciado": "Durante a calibração de um transmissor de pressão com range de 0 a 10 kgf/cm², o técnico observa que o instrumento apresenta uma leitura de 4,2 mA quando a pressão aplicada é zero. Esse tipo de erro, que desloca toda a curva de calibração paralelamente, é conhecido como:",
+            "opcoes": [
+                "A) Erro de Angularidade (Span).",
+                "B) Erro de Zero (Histerese).",
+                "C) Erro de Zero (Offset).",
+                "D) Erro de Linearidade.",
+                "E) Erro de Repetibilidade."
+            ],
+            "correta": "C) Erro de Zero (Offset).",
+            "explicacao": "O erro de zero ocorre quando o sinal de saída inicial não corresponde ao valor mínimo da escala (4 mA), mas mantém a mesma inclinação da curva."
+        },
+        {
+            "enunciado": "Válvulas de controle do tipo 'Globo' são amplamente utilizadas em refinarias devido à sua capacidade de regulagem. Em uma situação de emergência por falha de ar comprimido, uma válvula 'Falha-Aberta' (Air-to-Close) irá:",
+            "opcoes": [
+                "A) Permanecer na última posição em que estava.",
+                "B) Deslocar-se totalmente para a posição de fechamento.",
+                "C) Abrir-se totalmente, permitindo a passagem total do fluido.",
+                "D) Reduzir a vazão para 50% por segurança.",
+                "E) Travar mecanicamente no meio do curso."
+            ],
+            "correta": "C) Abrir-se totalmente, permitindo a passagem total do fluido.",
+            "explicacao": "Válvulas Air-to-Close (Ar para fechar) possuem molas que as empurram para a posição aberta caso o suprimento de ar falhe."
+        },
+        
+        {
+            "enunciado": "Para medir a temperatura de um mancal de uma bomba centrífuga de grande porte, utiliza-se um sensor do tipo PT-100. Sobre este instrumento, é correto afirmar que ele opera baseado na:",
+            "opcoes": [
+                "A) Geração de uma milivoltagem proporcional ao calor.",
+                "B) Variação da resistência elétrica de um fio de platina com a temperatura.",
+                "C) Dilatação de um gás inerte dentro de um bulbo metálico.",
+                "D) Mudança na cor de um cristal líquido sensível.",
+                "E) Emissão de radiação infravermelha pelo metal."
+            ],
+            "correta": "B) Variação da resistência elétrica de um fio de platina com a temperatura.",
+            "explicacao": "O PT-100 é uma termorresistência (RTD) feita de platina que possui exatamente 100 Ohms quando está a 0°C."
+        },
+        {
+            "enunciado": "Em um sistema de controle digital, o protocolo de comunicação HART é muito utilizado. Sua principal característica técnica é permitir a:",
+            "opcoes": [
+                "A) Substituição total dos fios de cobre por fibra óptica.",
+                "B) Transmissão de sinais apenas em corrente alternada de alta potência.",
+                "C) Sobreposição de um sinal digital de comunicação sobre o sinal analógico 4-20 mA.",
+                "D) Eliminação completa da necessidade de calibração periódica.",
+                "E) Medição de vazão mássica em tubulações de pequeno diâmetro."
+            ],
+            "correta": "C) Sobreposição de um sinal digital de comunicação sobre o sinal analógico 4-20 mA.",
+            "explicacao": "O HART permite configurar e diagnosticar instrumentos inteligentes sem interromper o sinal analógico de controle."
+        },
+        {
+            "enunciado": "Um pressostato é um instrumento de segurança e intertravamento. Quando a pressão do processo atinge um valor crítico predefinido (setpoint do pressostato), ele atua diretamente sobre:",
+            "opcoes": [
+                "A) Um potenciômetro de ajuste fino.",
+                "B) Um contato elétrico seco (abre ou fecha um circuito).",
+                "C) Uma válvula manual do tipo gaveta.",
+                "D) O display digital do operador no painel.",
+                "E) A velocidade de rotação do motor elétrico."
+            ],
+            "correta": "B) Um contato elétrico seco (abre ou fecha um circuito).",
+            "explicacao": "Diferente do transmissor, o pressostato é uma chave on/off que aciona alarmes ou desliga equipamentos em caso de sobrepressão."
+        },
+        {
+            "enunciado": "O posicionador de uma válvula de controle tem como função principal garantir que a posição da haste da válvula corresponda exatamente ao sinal enviado pelo controlador. O uso do posicionador é altamente recomendado quando:",
+            "opcoes": [
+                "A) O fluido do processo é água limpa em baixa pressão.",
+                "B) Há necessidade de minimizar os efeitos de atrito na gaxeta e histerese.",
+                "C) A válvula é de ação manual e não possui atuador.",
+                "D) O processo é muito lento e não exige precisão.",
+                "E) O sinal de controle é exclusivamente digital via Wi-Fi."
+            ],
+            "correta": "B) Há necessidade de minimizar os efeitos de atrito na gaxeta e histerese.",
+            "explicacao": "O posicionador corrige desvios causados pelo atrito da haste, garantindo que a válvula abra exatamente o que o controlador pediu."
         }
+            
             
   ]
 
