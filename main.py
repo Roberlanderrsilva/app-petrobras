@@ -166,7 +166,7 @@ if 'indice' not in st.session_state:
     st.session_state.mostrar_explica = False
 
 if st.session_state.indice < len(questoes):
-    if st.session_state.indice < len(questoes):
+if st.session_state.indice < len(questoes):
     q = questoes[st.session_state.indice]
     st.subheader(f"Questão {st.session_state.indice + 1} de {len(questoes)}")
     
