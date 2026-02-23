@@ -86,7 +86,7 @@ if 'questoes_db' not in st.session_state:
             "correta": "Petroquímica (plásticos, borrachas, fertilizantes)",
             "explicacao": "A nafta é enviada para centrais petroquímicas onde é transformada em produtos básicos para fazer plásticos e químicos."
         },
-                {
+        {
             "enunciado": "Qual é a principal função de uma bomba centrífuga em uma instalação industrial?",
             "opcoes": ["Aumentar a temperatura de um gás", "Transferir energia cinética a um fluido para transformá-la em energia de pressão", "Medir a vazão de sólidos", "Resfriar o óleo lubrificante"],
             "correta": "Transferir energia cinética a um fluido para transformá-la em energia de pressão",
@@ -145,7 +145,8 @@ if 'questoes_db' not in st.session_state:
             "opcoes": ["Rotor", "Acoplamento", "Voluta", "Mancal"],
             "correta": "Acoplamento",
             "explicacao": "O acoplamento une o eixo do motor ao eixo da bomba, permitindo a transmissão de torque e absorvendo pequenas vibrações ou desalinhamentos."
-        },        {
+        },        
+        {
             "enunciado": "De acordo com a NR-13, qual é o documento obrigatório que deve conter o histórico de todas as inspeções de segurança de uma caldeira ou vaso de pressão?",
             "opcoes": ["Prontuário da Caldeira", "Livro de Registro de Segurança", "Certificado de Garantia", "Manual do Fabricante"],
             "correta": "Livro de Registro de Segurança",
@@ -263,7 +264,8 @@ if 'questoes_db' not in st.session_state:
             "opcoes": ["0 a 100 Volts", "4 a 20 mA (miliamperes)", "10 a 50 Amperes", "0 a 5 Volts"],
             "correta": "4 a 20 mA (miliamperes)",
             "explicacao": "O padrão 4-20mA é o mais usado porque permite detetar cabos rompidos (se o sinal for 0mA, há erro) e é resistente a ruídos elétricos."
-        },        {
+        },        
+        {
             "enunciado": "O petróleo é composto predominantemente por quais elementos químicos?",
             "opcoes": ["Oxigênio e Nitrogênio", "Carbono e Hidrogênio", "Enxofre e Ferro", "Hélio e Argônio"],
             "correta": "Carbono e Hidrogênio",
@@ -322,7 +324,8 @@ if 'questoes_db' not in st.session_state:
             "opcoes": ["A absorção de calor do ambiente", "A liberação de calor para o ambiente", "A mudança de cor para o azul", "A formação de gelo"],
             "correta": "A liberação de calor para o ambiente",
             "explicacao": "Reações exotérmicas, como a queima de combustíveis em fornos, liberam energia térmica para o meio externo."
-        },        {
+        },        
+        {
             "enunciado": "Qual é a principal função de um lubrificante em máquinas rotativas como bombas e compressores?",
             "opcoes": ["Aumentar o ruído", "Reduzir o atrito e o desgaste entre as superfícies em movimento", "Aumentar a temperatura de operação", "Solidificar as peças"],
             "correta": "Reduzir o atrito e o desgaste entre as superfícies em movimento",
@@ -357,7 +360,8 @@ if 'questoes_db' not in st.session_state:
             "opcoes": ["Consertar apenas quando quebra", "Trocar peças por tempo de uso", "Monitorar o estado do equipamento (ex: análise de vibração) para intervir apenas quando necessário", "Pintar a máquina toda semana"],
             "correta": "Monitorar o estado do equipamento (ex: análise de vibração) para intervir apenas quando necessário",
             "explicacao": "A preditiva 'prevê' a falha através de dados técnicos, como termografia
-        },        {
+        },        
+        {
             "enunciado": "De acordo com a Lei de Ohm, qual é a relação entre Tensão (V), Corrente (I) e Resistência (R)?",
             "opcoes": ["V = R / I", "V = I * R", "I = V * R", "R = V * I"],
             "correta": "V = I * R",
@@ -409,7 +413,7 @@ if 'questoes_db' not in st.session_state:
             "enunciado": "O 'Multímetro' é uma ferramenta versátil porque permite medir:",
             "opcoes": ["Apenas a temperatura", "Várias grandezas como Tensão, Corrente e Resistência num único aparelho", "Apenas o nível de ruído", "A pressão de pneus"],
             "correta": "Várias grandezas como Tensão, Corrente e Resist
-            
+        },    
         
             
         
