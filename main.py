@@ -412,7 +412,7 @@ if 'questoes_db' not in st.session_state:
         {
             "enunciado": "O 'Multímetro' é uma ferramenta versátil porque permite medir:",
             "opcoes": ["Apenas a temperatura", "Várias grandezas como Tensão, Corrente e Resistência num único aparelho", "Apenas o nível de ruído", "A pressão de pneus"],
-            "correta": "Várias grandezas como Tensão, Corrente e Resist
+            "correta": "Várias grandezas como Tensão, Corrente e Resist",
         },    
         
             
