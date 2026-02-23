@@ -1,4 +1,5 @@
 import streamlit as st
+import random 
 
 # --- SISTEMA DE CORES E CONTRASTE (COLE AQUI) ---
 if 'tema' not in st.session_state:
