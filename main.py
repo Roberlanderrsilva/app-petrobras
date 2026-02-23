@@ -166,8 +166,9 @@ if 'indice' not in st.session_state:
     st.session_state.mostrar_explica = False
 
 if st.session_state.indice < len(questoes):
+    if st.session_state.indice < len(questoes):
     q = questoes[st.session_state.indice]
-        st.subheader(f"Questão {st.session_state.indice + 1} de {len(questoes)}")
+    st.subheader(f"Questão {st.session_state.indice + 1} de {len(questoes)}")
     
     # --- BOX COM ALTO CONTRASTE (NOVO) ---
     st.markdown(f"""
@@ -187,29 +188,4 @@ if st.session_state.indice < len(questoes):
             </p>
         </div>
         """, unsafe_allow_html=True)
-
     
-    resposta = st.radio("Escolha a alternativa:", q['opcoes'], key=f"rad_{st.session_state.indice}")
-
-    if st.button("Confirmar Resposta"):
-        if resposta == q['correta']:
-            st.success("✅ CORRETO!")
-        else:
-            st.error(f"❌ INCORRETO! A resposta certa era: {q['correta']}")
-        st.session_state.mostrar_explica = True
-
-    if st.session_state.mostrar_explica:
-        st.markdown(f"**Explicação:** {q['explicacao']}")
-        if st.button("Próxima Questão ➡️"):
-            st.session_state.indice += 1
-            st.session_state.mostrar_explica = False
-            st.rerun()
-else:
-    st.balloons()
-    st.success("🎉 Você concluiu o Bloco de 50 questões!")
-    if st.button("Recomeçar e Embaralhar"):
-        del st.session_state.questoes_db 
-        st.session_state.indice = 0
-        st.session_state.mostrar_explica = False
-        st.rerun()
-         
