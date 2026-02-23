@@ -88,7 +88,6 @@ if 'questoes_db' not in st.session_state:
         }
         ]
     
-    ]
     random.shuffle(db_original)
     st.session_state.questoes_db = db_original
 
