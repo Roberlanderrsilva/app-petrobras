@@ -1,5 +1,20 @@
 import streamlit as st
-import random 
+
+# --- SISTEMA DE CORES E CONTRASTE (COLE AQUI) ---
+if 'tema' not in st.session_state:
+    st.session_state.tema = "Fundo Escuro"
+
+st.sidebar.title("Configurações do Mentor")
+st.session_state.tema = st.sidebar.radio("Escolha o contraste:", ["Fundo Escuro", "Fundo Claro"])
+
+if st.session_state.tema == "Fundo Escuro":
+    cor_fundo_box = "#121212"  # Preto
+    cor_texto_quest = "#FACC15" # Amarelo (Alto Contraste)
+else:
+    cor_fundo_box = "#F0F2F6"  # Cinza claro
+    cor_texto_quest = "#1E3A8A" # Azul Escuro
+# -----------------------------------------------
+
 
 # --- CONFIGURAÇÃO E CABEÇALHO ---
 st.set_page_config(page_title="Mentor Petrobras", layout="centered")
