@@ -171,8 +171,27 @@ if 'indice' not in st.session_state:
 
 if st.session_state.indice < len(questoes):
     q = questoes[st.session_state.indice]
-    st.subheader(f"Questão {st.session_state.indice + 1} de {len(questoes)}")
-    st.info(q["enunciado"])
+        st.subheader(f"Questão {st.session_state.indice + 1} de {len(questoes)}")
+    
+    # --- BOX COM ALTO CONTRASTE (NOVO) ---
+    st.markdown(f"""
+        <div style="
+            background-color: {cor_fundo_box}; 
+            padding: 20px; 
+            border-radius: 12px; 
+            border: 3px solid #3b82f6; 
+            margin-bottom: 20px;">
+            <p style="
+                color: {cor_texto_quest}; 
+                font-size: 20px; 
+                font-weight: bold; 
+                line-height: 1.6;
+                margin: 0;">
+                {q['enunciado']}
+            </p>
+        </div>
+        """, unsafe_allow_html=True)
+
     
     resposta = st.radio("Escolha a alternativa:", q['opcoes'], key=f"rad_{st.session_state.indice}")
 
