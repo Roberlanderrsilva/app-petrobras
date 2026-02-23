@@ -263,7 +263,154 @@ if 'questoes_db' not in st.session_state:
             "opcoes": ["0 a 100 Volts", "4 a 20 mA (miliamperes)", "10 a 50 Amperes", "0 a 5 Volts"],
             "correta": "4 a 20 mA (miliamperes)",
             "explicacao": "O padrão 4-20mA é o mais usado porque permite detetar cabos rompidos (se o sinal for 0mA, há erro) e é resistente a ruídos elétricos."
+        },        {
+            "enunciado": "O petróleo é composto predominantemente por quais elementos químicos?",
+            "opcoes": ["Oxigênio e Nitrogênio", "Carbono e Hidrogênio", "Enxofre e Ferro", "Hélio e Argônio"],
+            "correta": "Carbono e Hidrogênio",
+            "explicacao": "O petróleo é uma mistura complexa de hidrocarbonetos, moléculas formadas essencialmente por átomos de carbono e hidrogênio."
         },
+        {
+            "enunciado": "Na química orgânica, como são classificados os hidrocarbonetos que possuem apenas ligações simples entre os átomos de carbono?",
+            "opcoes": ["Alcenos", "Alcinos", "Alcanos", "Aromáticos"],
+            "correta": "Alcanos",
+            "explicacao": "Alcanos são hidrocarbonetos saturados (apenas ligações simples), como o metano, etano e propano."
+        },
+        {
+            "enunciado": "O índice que mede a resistência da gasolina à detonação prematura (batida de pino) no motor é chamado de:",
+            "opcoes": ["Ponto de Fulgor", "Viscosidade", "Octanagem", "Número de Cetano"],
+            "correta": "Octanagem",
+            "explicacao": "Quanto maior a octanagem, maior a capacidade da gasolina de ser comprimida sem explodir antes da centelha da vela."
+        },
+        {
+            "enunciado": "Em uma escala de pH, uma solução com valor 2 é considerada:",
+            "opcoes": ["Fortemente Básica", "Neutra", "Fortemente Ácida", "Levemente Alcalina"],
+            "correta": "Fortemente Ácida",
+            "explicacao": "A escala de pH vai de 0 a 14. Valores abaixo de 7 são ácidos (quanto menor, mais ácido) e acima de 7 são básicos."
+        },
+        {
+            "enunciado": "Qual é a principal diferença entre um fenômeno físico e um fenômeno químico?",
+            "opcoes": ["O físico muda a cor, o químico não", "O físico não altera a natureza da matéria; o químico transforma substâncias em novas substâncias", "O químico é sempre mais rápido que o físico", "Não existe diferença prática"],
+            "correta": "O físico não altera a natureza da matéria; o químico transforma substâncias em novas substâncias",
+            "explicacao": "A destilação é um fenômeno físico (mudança de estado). A combustão é um fenômeno químico (transformação de combustível em CO2 e água)."
+        },
+        {
+            "enunciado": "O processo de separação de misturas que utiliza a diferença de densidade para separar água e óleo em um decantador é a:",
+            "opcoes": ["Filtração", "Decantação", "Sublimação", "Cristalização"],
+            "correta": "Decantação",
+            "explicacao": "Na decantação, o líquido mais denso (água) deposita-se no fundo, enquanto o menos denso (óleo) flutua."
+        },
+        {
+            "enunciado": "O que representa a 'Massa Molar' de uma substância?",
+            "opcoes": ["O volume ocupado por um gás", "A massa em gramas presente em um mol de moléculas daquela substância", "A temperatura de ebulição", "A pressão exercida no recipiente"],
+            "correta": "A massa em gramas presente em um mol de moléculas daquela substância",
+            "explicacao": "A massa molar (g/mol) é fundamental para cálculos estequiométricos em reações químicas industriais."
+        },
+        {
+            "enunciado": "Qual hidrocarboneto aromático é um dos solventes mais comuns e base para muitos produtos petroquímicos, mas exige rigoroso controle por ser tóxico?",
+            "opcoes": ["Metano", "Benzeno", "Etanol", "Acetileno"],
+            "correta": "Benzeno",
+            "explicacao": "O benzeno é um anel aromático fundamental na petroquímica, mas é carcinogênico e possui limites rígidos de exposição na NR-15."
+        },
+        {
+            "enunciado": "Em uma reação de combustão completa de um hidrocarboneto, os produtos finais são sempre:",
+            "opcoes": ["Monóxido de Carbono e Fuligem", "Dióxido de Carbono (CO2) e Água (H2O)", "Apenas Hidrogênio líquido", "Enxofre e Nitrogênio"],
+            "correta": "Dióxido de Carbono (CO2) e Água (H2O)",
+            "explicacao": "A combustão completa consome todo o combustível na presença de oxigênio suficiente, gerando CO2 e vapor de água."
+        },
+        {
+            "enunciado": "O que caracteriza uma reação química Exotérmica?",
+            "opcoes": ["A absorção de calor do ambiente", "A liberação de calor para o ambiente", "A mudança de cor para o azul", "A formação de gelo"],
+            "correta": "A liberação de calor para o ambiente",
+            "explicacao": "Reações exotérmicas, como a queima de combustíveis em fornos, liberam energia térmica para o meio externo."
+        },        {
+            "enunciado": "Qual é a principal função de um lubrificante em máquinas rotativas como bombas e compressores?",
+            "opcoes": ["Aumentar o ruído", "Reduzir o atrito e o desgaste entre as superfícies em movimento", "Aumentar a temperatura de operação", "Solidificar as peças"],
+            "correta": "Reduzir o atrito e o desgaste entre as superfícies em movimento",
+            "explicacao": "O lubrificante cria uma película que separa as superfícies metálicas, diminuindo o atrito, o calor e o desgaste."
+        },
+        {
+            "enunciado": "O componente mecânico destinado a suportar um eixo e permitir sua rotação com o mínimo de atrito é o:",
+            "opcoes": ["Mancal", "Parafuso", "Chaveta", "Flange"],
+            "correta": "Mancal",
+            "explicacao": "Os mancais (de deslizamento ou de rolamento) são os suportes que guiam e apoiam os eixos rotativos."
+        },
+        {
+            "enunciado": "A 'Viscosidade' de um óleo lubrificante é definida como:",
+            "opcoes": ["A cor do óleo", "A resistência do fluido ao escoamento", "O ponto em que o óleo congela", "A quantidade de água no óleo"],
+            "correta": "A resistência do fluido ao escoamento",
+            "explicacao": "Óleos mais grossos têm alta viscosidade; óleos mais finos têm baixa viscosidade. É a propriedade mais importante de um lubrificante."
+        },
+        {
+            "enunciado": "Qual ferramenta é utilizada para medir com precisão de centésimos de milímetro o diâmetro de um eixo ou a espessura de uma peça?",
+            "opcoes": ["Trena", "Micrômetro", "Martelo", "Chave de fenda"],
+            "correta": "Micrômetro",
+            "explicacao": "O micrômetro é um instrumento de medição linear de alta precisão, essencial para ajustes mecânicos finos."
+        },
+        {
+            "enunciado": "O desalinhamento entre o eixo do motor e o eixo da bomba pode causar:",
+            "opcoes": ["Aumento da eficiência", "Vibração excessiva e desgaste prematuro de rolamentos e selos", "Resfriamento do motor", "Economia de energia"],
+            "correta": "Vibração excessiva e desgaste prematuro de rolamentos e selos",
+            "explicacao": "Eixos desalinhados forçam os componentes, gerando vibração que destrói vedações e rolamentos rapidamente."
+        },
+        {
+            "enunciado": "A Manutenção Preditiva baseia-se em:",
+            "opcoes": ["Consertar apenas quando quebra", "Trocar peças por tempo de uso", "Monitorar o estado do equipamento (ex: análise de vibração) para intervir apenas quando necessário", "Pintar a máquina toda semana"],
+            "correta": "Monitorar o estado do equipamento (ex: análise de vibração) para intervir apenas quando necessário",
+            "explicacao": "A preditiva 'prevê' a falha através de dados técnicos, como termografia
+        },        {
+            "enunciado": "De acordo com a Lei de Ohm, qual é a relação entre Tensão (V), Corrente (I) e Resistência (R)?",
+            "opcoes": ["V = R / I", "V = I * R", "I = V * R", "R = V * I"],
+            "correta": "V = I * R",
+            "explicacao": "A tensão é igual ao produto da corrente pela resistência. É a fórmula fundamental da eletricidade."
+        },
+        {
+            "enunciado": "Qual é a unidade de medida da Potência Elétrica no Sistema Internacional?",
+            "opcoes": ["Volt (V)", "Ampere (A)", "Watt (W)", "Ohm (Ω)"],
+            "correta": "Watt (W)",
+            "explicacao": "O Watt mede a taxa de conversão de energia elétrica em trabalho ou calor por unidade de tempo."
+        },
+        {
+            "enunciado": "O motor elétrico mais utilizado na indústria petroquímica para acionar bombas e compressores, devido à sua robustez e baixo custo, é o:",
+            "opcoes": ["Motor de Corrente Contínua", "Motor de Indução Trifásico (Gaiola de Esquilo)", "Motor a Vapor", "Motor Monofásico de Íman Permanente"],
+            "correta": "Motor de Indução Trifásico (Gaiola de Esquilo)",
+            "explicacao": "Este motor é extremamente robusto, não possui escovas (o que reduz faíscas em áreas inflamáveis) e exige pouca manutenção."
+        },
+        {
+            "enunciado": "A função de um transformador numa subestação industrial é:",
+            "opcoes": ["Transformar Corrente Alternada em Contínua", "Alterar os níveis de tensão (aumentar ou diminuir) mantendo a frequência", "Armazenar energia para emergências", "Medir o consumo de reativos"],
+            "correta": "Alterar os níveis de tensão (aumentar ou diminuir) mantendo a frequência",
+            "explicacao": "Os transformadores permitem baixar a alta tensão da rede para níveis seguros de utilização nos motores das unidades (ex: 440V ou 380V)."
+        },
+        {
+            "enunciado": "O dispositivo de proteção que interrompe o circuito automaticamente quando deteta uma sobrecarga ou curto-circuito é o:",
+            "opcoes": ["Resistor", "Disjuntor", "Capacitor", "Voltímetro"],
+            "correta": "Disjuntor",
+            "explicacao": "O disjuntor protege os cabos e equipamentos contra danos causados por correntes excessivas."
+        },
+        {
+            "enunciado": "Em eletricidade, o que caracteriza um 'Curto-circuito'?",
+            "opcoes": ["Um circuito com resistência infinita", "A união direta de dois pontos de um circuito com resistência quase nula, gerando uma corrente altíssima", "O desligamento propositado de uma lâmpada", "A falta de tensão numa tomada"],
+            "correta": "A união direta de dois pontos de um circuito com resistência quase nula, gerando uma corrente altíssima",
+            "explicacao": "No curto-circuito, a corrente sobe bruscamente, podendo causar incêndios e danos graves se a proteção (disjuntor) não atuar."
+        },
+        {
+            "enunciado": "O instrumento utilizado para medir a tensão elétrica (voltagem) entre dois pontos de um painel é o:",
+            "opcoes": ["Amperímetro", "Voltímetro", "Ohmímetro", "Wattímetro"],
+            "correta": "Voltímetro",
+            "explicacao": "O voltímetro deve ser ligado em paralelo com o componente ou pontos que se deseja medir a diferença de potencial."
+        },
+        {
+            "enunciado": "Qual é a principal diferença entre Corrente Alternada (CA) e Corrente Contínua (CC)?",
+            "opcoes": ["A CA muda de sentido periodicamente, enquanto a CC flui num único sentido", "A CC é usada em motores grandes e a CA em pilhas", "A CA não dá choque e a CC sim", "Não há diferença, são apenas nomes diferentes"],
+            "correta": "A CA muda de sentido periodicamente, enquanto a CC flui num único sentido",
+            "explicacao": "A CA é a corrente das redes elétricas e motores industriais; a CC é comum em baterias e circuitos eletrónicos."
+        },
+        {
+            "enunciado": "O 'Multímetro' é uma ferramenta versátil porque permite medir:",
+            "opcoes": ["Apenas a temperatura", "Várias grandezas como Tensão, Corrente e Resistência num único aparelho", "Apenas o nível de ruído", "A pressão de pneus"],
+            "correta": "Várias grandezas como Tensão, Corrente e Resist
+            
+        
             
         
         
