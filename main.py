@@ -359,7 +359,7 @@ if 'questoes_db' not in st.session_state:
             "enunciado": "A Manutenção Preditiva baseia-se em:",
             "opcoes": ["Consertar apenas quando quebra", "Trocar peças por tempo de uso", "Monitorar o estado do equipamento (ex: análise de vibração) para intervir apenas quando necessário", "Pintar a máquina toda semana"],
             "correta": "Monitorar o estado do equipamento (ex: análise de vibração) para intervir apenas quando necessário",
-            "explicacao": "A preditiva 'prevê' a falha através de dados técnicos, como termografia
+            "explicacao": "A preditiva 'prevê' a falha através de dados técnicos, como termografia."
         },        
         {
             "enunciado": "De acordo com a Lei de Ohm, qual é a relação entre Tensão (V), Corrente (I) e Resistência (R)?",
