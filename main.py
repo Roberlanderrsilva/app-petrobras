@@ -1,4 +1,4 @@
-import streamlit as st
+yoimport streamlit as st
 import random 
 
 # --- SISTEMA DE CORES E CONTRASTE (COLE AQUI) ---
@@ -155,10 +155,6 @@ if 'questoes_db' not in st.session_state:
             
             
   ]
-
-
-
-  
     random.shuffle(db_original) 
     st.session_state.questoes_db = db_original
 
