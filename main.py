@@ -23,9 +23,9 @@ st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Petrobras_lo
 st.title("⚓ Mentor Petrobras")
 st.write("---")
 
-# 4. BANCO DE DADOS (Coloquei 2 de exemplo, você completa com as suas)
+# 4. BANCO DE DADOS (BLOCO 01 - REFINO)
 if 'questoes_db' not in st.session_state:
-        db_original = [
+    db_original = [
         {
             "enunciado": "Na destilação atmosférica do petróleo, qual fração é retirada no topo da torre por possuir o menor ponto de ebulição?",
             "opcoes": ["Diesel", "Querosene", "Gás Liquefeito (GLP) e Nafta leve", "Resíduo Atmosférico"],
@@ -86,9 +86,7 @@ if 'questoes_db' not in st.session_state:
             "correta": "Petroquímica (plásticos, borrachas, fertilizantes)",
             "explicacao": "A nafta é enviada para centrais petroquímicas onde é transformada em produtos básicos para fazer plásticos e químicos."
         }
-            
-        ]
-    
+    ]
     random.shuffle(db_original)
     st.session_state.questoes_db = db_original
 
@@ -130,8 +128,9 @@ else:
     st.balloons()
     st.success("🎉 Você concluiu o bloco!")
     if st.button("Recomeçar"):
-        del st.session_state.questoes_db
+        if 'questoes_db' in st.session_state:
+            del st.session_state.questoes_db
         st.session_state.indice = 0
         st.session_state.mostrar_explica = False
         st.rerun()
-        
+    
