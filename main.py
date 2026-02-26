@@ -27,6 +27,38 @@ st.write("---")
 if 'questoes_db' not in st.session_state:
     db_original = [
         {
+questoes_petrobras_avancadas = [
+    # --- BLOCO: OPERADOR DE PRODUÇÃO (ENUNCIADOS LONGOS) ---
+    {
+        "id": 1,
+        "area": "Produção",
+        "pergunta": "Durante o processamento primário de petróleo em uma Unidade de Manutenção e Segurança (UMS), o fluido multifásico proveniente dos poços atinge o vaso separador de primeiro estágio. Devido à alta pressão e velocidade de entrada, o fluido tende a gerar turbulência e arraste de gotículas de óleo para a corrente de gás. Para mitigar esse arraste mecânico e garantir que o gás saia pelo topo com o menor teor de líquido possível, utiliza-se um componente interno constituído por uma malha metálica ou de polímero. Esse componente é o:",
+        "opcoes": ["A) Defletor de entrada (Inlet Diverter)", "B) Quebra-ondas (Wave Breaker)", "C) Extrator de névoa (Demister Pad)", "D) Placa de orifício de fundo"],
+        "resposta": "C"
+    },
+    {
+        "id": 2,
+        "area": "Produção",
+        "pergunta": "Um operador de produção identifica, durante sua ronda, que uma bomba centrífuga de transferência de água de descarte apresenta um ruído característico de 'bombeamento de pedras', acompanhado de forte vibração e queda na pressão de descarga. Ao verificar o NPSH disponível, constata-se que este é inferior ao NPSH requerido pelo fabricante. Esse cenário técnico descreve o fenômeno destrutivo que causa pites de erosão no impulsor, conhecido como:",
+        "opcoes": ["A) Golpe de Aríete", "B) Cavitação", "C) Surto de Pressão (Surge)", "D) Flotação centrípeta"],
+        "resposta": "B"
+    },
+    {
+        "id": 3,
+        "area": "Produção",
+        "pergunta": "Em ambientes de exploração 'offshore', a presença de H2S (Gás Sulfídrico) em correntes de processo é monitorada rigorosamente. Em um cenário de vazamento acidental em uma área baixa da planta (conveses inferiores), o operador deve saber que este gás, além de ser altamente tóxico e letal em baixas concentrações, possui uma característica física fundamental que dita seu comportamento de dispersão. Essa característica é:",
+        "opcoes": ["A) Ser mais leve que o ar, tendendo a se acumular em tetos.", "B) Ser inodoro em qualquer concentração, impossibilitando a detecção humana.", "C) Ser mais denso (pesado) que o ar, tendendo a se acumular em canaletas e pontos baixos.", "D) Ser altamente reativo com o nitrogênio atmosférico, gerando chamas verdes."],
+        "resposta": "C"
+    },
+    {
+        "id": 4,
+        "area": "Produção",
+        "pergunta": "Considere um sistema de segurança instrumentado de uma plataforma (SIS). Quando uma variável de processo, como o nível de um vaso separador, atinge o limite de 'Muito Alto' (LSHH), o sistema deve agir para isolar a entrada de fluidos e proteger a integridade da planta. A válvula automática, projetada para fechamento rápido e estanqueidade total, acionada pelo sistema de intertravamento de emergência, é denominada:",
+        "opcoes": ["A) Válvula de Controle de Fluxo (FCV)", "B) Válvula de Parada de Emergência (ESDV)", "C) Válvula de Alívio de Pressão (PSV)", "D) Válvula Globo de bloqueio manual"],
+        "resposta": "B"
+    }
+]
+
             "enunciado": "Na destilação atmosférica do petróleo, qual fração é retirada no topo da torre por possuir o menor ponto de ebulição?",
             "opcoes": ["Diesel", "Querosene", "Gás Liquefeito (GLP) e Nafta leve", "Resíduo Atmosférico"],
             "correta": "Gás Liquefeito (GLP) e Nafta leve",
