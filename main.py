@@ -57,7 +57,7 @@ if 'questoes_db' not in st.session_state:
         "opcoes": ["A) Válvula de Controle de Fluxo (FCV)", "B) Válvula de Parada de Emergência (ESDV)", "C) Válvula de Alívio de Pressão (PSV)", "D) Válvula Globo de bloqueio manual"],
         "resposta": "B"
     }
-]
+],
 
 questoes_petrobras_avancadas = [
     # --- BLOCO: OPERADOR DE PRODUÇÃO (ENUNCIADOS LONGOS) ---
@@ -89,7 +89,7 @@ questoes_petrobras_avancadas = [
         "opcoes": ["A) Válvula de Controle de Fluxo (FCV)", "B) Válvula de Parada de Emergência (ESDV)", "C) Válvula de Alívio de Pressão (PSV)", "D) Válvula Globo de bloqueio manual"],
         "resposta": "B"
     }
-]
+],
 
             "enunciado": "Na destilação atmosférica do petróleo, qual fração é retirada no topo da torre por possuir o menor ponto de ebulição?",
             "opcoes": ["Diesel", "Querosene", "Gás Liquefeito (GLP) e Nafta leve", "Resíduo Atmosférico"],
@@ -482,7 +482,7 @@ questoes_petrobras_avancadas = [
             
         
         
-    ]
+    ],
     random.shuffle(db_original)
     st.session_state.questoes_db = db_original
 
