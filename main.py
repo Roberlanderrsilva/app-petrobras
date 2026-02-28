@@ -56,8 +56,8 @@ if 'questoes_db' not in st.session_state:
         "pergunta": "Considere um sistema de segurança instrumentado de uma plataforma (SIS). Quando uma variável de processo, como o nível de um vaso separador, atinge o limite de 'Muito Alto' (LSHH), o sistema deve agir para isolar a entrada de fluidos e proteger a integridade da planta. A válvula automática, projetada para fechamento rápido e estanqueidade total, acionada pelo sistema de intertravamento de emergência, é denominada:",
         "opcoes": ["A) Válvula de Controle de Fluxo (FCV)", "B) Válvula de Parada de Emergência (ESDV)", "C) Válvula de Alívio de Pressão (PSV)", "D) Válvula Globo de bloqueio manual"],
         "resposta": "B"
-    }
-],
+    },
+]
 
 questoes_petrobras_avancadas = [
     # --- BLOCO: OPERADOR DE PRODUÇÃO (ENUNCIADOS LONGOS) ---
@@ -88,8 +88,8 @@ questoes_petrobras_avancadas = [
         "pergunta": "Considere um sistema de segurança instrumentado de uma plataforma (SIS). Quando uma variável de processo, como o nível de um vaso separador, atinge o limite de 'Muito Alto' (LSHH), o sistema deve agir para isolar a entrada de fluidos e proteger a integridade da planta. A válvula automática, projetada para fechamento rápido e estanqueidade total, acionada pelo sistema de intertravamento de emergência, é denominada:",
         "opcoes": ["A) Válvula de Controle de Fluxo (FCV)", "B) Válvula de Parada de Emergência (ESDV)", "C) Válvula de Alívio de Pressão (PSV)", "D) Válvula Globo de bloqueio manual"],
         "resposta": "B"
-    }
-],
+    },
+]
 
             "enunciado": "Na destilação atmosférica do petróleo, qual fração é retirada no topo da torre por possuir o menor ponto de ebulição?",
             "opcoes": ["Diesel", "Querosene", "Gás Liquefeito (GLP) e Nafta leve", "Resíduo Atmosférico"],
@@ -482,7 +482,7 @@ questoes_petrobras_avancadas = [
             
         
         
-    ],
+    ]
     random.shuffle(db_original)
     st.session_state.questoes_db = db_original
 
